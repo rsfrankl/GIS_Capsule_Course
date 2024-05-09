@@ -13,6 +13,7 @@ website:
       - Day2.qmd
       - Day3.qmd
       - Day4.qmd
+      - Data
 
 format:
   html:
