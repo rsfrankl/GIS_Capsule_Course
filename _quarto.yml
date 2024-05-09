@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "GIS_capsule_course"
+  title: "GIS Capsule Course"
   navbar:
     left:
       - href: index.qmd
