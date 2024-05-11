@@ -2,29 +2,22 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "What to Expect",
+    "title": "What to Expect: Summer 2024",
     "section": "",
-    "text": "Almost every year since 2017 I’ve visited the GSSI in L’Aquila, Italy, to meet students and offer an introduction to GIS. This year is the year I finally move it all online."
+    "text": "This short course introduces students to the fundamentals of GIS: locating, importing, and visualizing spatial data, as well as common spatial analysis methods and approaches. Each day’s activity is organized around short lectures, complemented by hands-on tutorials and independent work that provide structured practice working with data, software, and common spatial methods."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "index.html#welcome-and-benvenuti",
-    "href": "index.html#welcome-and-benvenuti",
-    "title": "What to Expect",
-    "section": "Welcome and Benvenuti",
-    "text": "Welcome and Benvenuti\nThis short course introduces students to the fundamentals of GIS: locating, importing, and visualizing spatial data, as well as common spatial analysis methods and approaches. Each day’s activity is organized around short lectures, complemented by hands-on tutorials and independent work that provide structured practice working with data, software, and common spatial methods."
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "What to Expect: Summer 2024",
+    "section": "Schedule",
+    "text": "Schedule"
   },
   {
     "objectID": "index.html#progettino",
     "href": "index.html#progettino",
-    "title": "What to Expect",
+    "title": "What to Expect: Summer 2024",
     "section": "Progettino",
-    "text": "Progettino\nStudents will select a mini-project, or progettino that allows them to apply the skills they’ve learned, with brief presentations on the final afternoon."
+    "text": "Progettino"
   }
 ]
