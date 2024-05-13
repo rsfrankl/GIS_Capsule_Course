@@ -1,0 +1,88 @@
+/*-- scss:defaults --*/
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+// Colors
+$yellow: #FDF5CE;
+$brown: #704744;
+$teal: #286d8d;
+$gray: #6C7567;
+$pink: #BC6484;
+
+// Base document colors
+$navbar-bg: $yellow; // navbar
+$sidebar-bg: $yellow; //sidebar
+$sidebar-hl: $pink; // highlight color when hovering over sidebar links
+$sidebar-fg: $teal; // sidebar foreground elements
+$navbar-fg: $teal; // navbar foreground elements
+$navbar-hl: $pink; // highlight color when hovering over navbar links
+$body-bg: $yellow; // page background 
+$body-color: $brown; // page text 
+$footer-bg: $yellow; // footer 
+$link-color: $pink; // hyperlinks 
+
+/*-- scss:rules --*/
+
+.title {
+  font-size: 40px;
+  color: $yellow;
+}
+
+h1 {
+    color: $brown;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 30px;
+    color: #286d8d;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------- element selectors ------- */
+
+/* style level one headers */
+h1 {
+  background-color: $pink;
+  border-radius: 30px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+/* columns for workshop schedule */
+.content-block {
+  padding-top: 0px;
+  padding-bottom: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.features {
+  max-width: 720px;
+  padding-bottom: 2em;
+}
+
+.feature {
+  margin-top: 0px;
+}
+
+.features {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 0 0 -10px;
+  width: calc(100% + 30px);
+}
+
+.feature {
+  width: calc(50% - 30px);
+  margin: 10px 0 0 30px;
+}
+
+.feature h3 {
+  margin-top: 0;
+}
+
