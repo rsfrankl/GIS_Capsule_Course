@@ -11,14 +11,14 @@
     "href": "index.html#schedule-tentative",
     "title": "What to Expect: Summer 2024",
     "section": "Schedule (tentative)",
-    "text": "Schedule (tentative)\n\n\n\nMonday\n\n16:30–18:30: Introduction\n\n\n\nTuesday\n\n9:00–11:00: Hands on practice\n\n\n\nWednesday\n\n9:00–11:00: Hands on practice"
+    "text": "Schedule (tentative)\n\nMonday\n\n16:30–16:45: Introductions!\n16:45–17:30: Why GIS?\n17:30–18:30: QGIS tour\n\n\n\nTuesday\n\n9:00–9:30: Important GIS ground rules\n9:30–11:00: Tutorial 1\n\n\n\nWednesday\n\n9:00–9:30: Recap and question time\n9:30–10:30: Cartography basics\n10:30–10:45: Break!\n10:45–13:00: Tutorial 2\n13:00–14:30: Lunch\n14:30–15:30: Common GIS methods and tools, Part 1\n15:30–17:00: Tutorial 3\n\n\n\nThursday\n\n9:00–9:30: Recap and question time\n9:30–10:00: Common GIS methods and tools, Part 2\n10:00–11:00: Tutorial 4\n11:00–11:15: Break!\n11:15–12:30: Tutorial 4 continued\n13:00–14:30: Lunch\n14:30–17:00: Project work and discussion\n\n\n\nFriday\n\n9:00–13:00: Project work and discussion\n13:00–14:30: Lunch\n14:30–15:30: Progettino presentations"
   },
   {
-    "objectID": "index.html#progettino",
-    "href": "index.html#progettino",
+    "objectID": "index.html#il-progettino",
+    "href": "index.html#il-progettino",
     "title": "What to Expect: Summer 2024",
-    "section": "Progettino",
-    "text": "Progettino"
+    "section": "Il Progettino",
+    "text": "Il Progettino\nThe best way to learn new tools and software applications is through independent work—and if you really want to see how spatial data and methods can be useful in your own research, you’ve got to try it! That’s why a core component of GIS@GSSI is the progettino, a mini-project that you work on over the course of the week and present to the group on Friday afternoon."
   },
   {
     "objectID": "Lectures/Introductions.html#what-are-the-pathways-of-population-change-across-the-u.s.",
