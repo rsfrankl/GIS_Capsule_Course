@@ -150,6 +150,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Getting started with QGIS</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pages/GIS_rules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The GIS Commandments</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -243,10 +249,22 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#first-things-first-why-an-old-school-gis-application" id="toc-first-things-first-why-an-old-school-gis-application" class="nav-link active" data-scroll-target="#first-things-first-why-an-old-school-gis-application">First things first: Why an old-school GIS application?</a></li>
   <li><a href="#downloading-qgis" id="toc-downloading-qgis" class="nav-link" data-scroll-target="#downloading-qgis">Downloading QGIS</a></li>
-  <li><a href="#locating-your-data" id="toc-locating-your-data" class="nav-link" data-scroll-target="#locating-your-data">Locating your data</a></li>
+  <li><a href="#locating-tutorial-data" id="toc-locating-tutorial-data" class="nav-link" data-scroll-target="#locating-tutorial-data">Locating tutorial data</a>
+  <ul class="collapse">
+  <li><a href="#what-about-other-data" id="toc-what-about-other-data" class="nav-link" data-scroll-target="#what-about-other-data">What about other data?</a></li>
+  </ul></li>
+  <li><a href="#data-hygiene" id="toc-data-hygiene" class="nav-link" data-scroll-target="#data-hygiene">Data hygiene</a></li>
   <li><a href="#opening-qgis-and-getting-started" id="toc-opening-qgis-and-getting-started" class="nav-link" data-scroll-target="#opening-qgis-and-getting-started">Opening QGIS and getting started</a>
   <ul class="collapse">
-  <li><a href="#qgis-projects-versus-data" id="toc-qgis-projects-versus-data" class="nav-link" data-scroll-target="#qgis-projects-versus-data">QGIS projects versus data</a></li>
+  <li><a href="#adding-data" id="toc-adding-data" class="nav-link" data-scroll-target="#adding-data">Adding data</a></li>
+  <li><a href="#layer-visibility" id="toc-layer-visibility" class="nav-link" data-scroll-target="#layer-visibility">Layer visibility</a></li>
+  <li><a href="#layer-symbology" id="toc-layer-symbology" class="nav-link" data-scroll-target="#layer-symbology">Layer symbology</a></li>
+  </ul></li>
+  <li><a href="#qgis-projects-versus-data" id="toc-qgis-projects-versus-data" class="nav-link" data-scroll-target="#qgis-projects-versus-data">QGIS: projects versus data</a></li>
+  <li><a href="#getting-help-and-learning-more" id="toc-getting-help-and-learning-more" class="nav-link" data-scroll-target="#getting-help-and-learning-more">Getting help and learning more</a>
+  <ul class="collapse">
+  <li><a href="#qgis-documentation" id="toc-qgis-documentation" class="nav-link" data-scroll-target="#qgis-documentation">QGIS Documentation</a></li>
+  <li><a href="#learning-to-love-google" id="toc-learning-to-love-google" class="nav-link" data-scroll-target="#learning-to-love-google">Learning to love Google</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -275,11 +293,11 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="first-things-first-why-an-old-school-gis-application" class="level2">
 <h2 class="anchored" data-anchor-id="first-things-first-why-an-old-school-gis-application">First things first: Why an old-school GIS application?</h2>
-<p>It’s the 21st century—why are we using a desktop, GUI-based software program? A few reasons:</p>
+<p>It’s the 21st century—why are we using a desktop GUI-based software program? A few reasons:</p>
 <ul>
-<li>A GIS like <a href="https://www.qgis.org/en/site/">QGIS</a> or <a href="https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview">ESRI’s ArcGIS Pro</a> provides a soft introduction to spatial thinking, managing spatial data files, and visualising/analyzing information.</li>
-<li>The GUI (graphical user interface) aspect of a traditional GIS allows you to see the range of options for many of the tools we’ll work with, both cartographical and analytical.</li>
-<li>A GIS is great for visualising multiple layers of information at once…and catching potential problems early…</li>
+<li>A GIS like <a href="https://www.qgis.org/en/site/">QGIS</a> or ESRI’s <a href="https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview">ArcGIS Pro</a> provides a soft introduction to spatial thinking, managing spatial data files, and visualizing/analyzing information. It’s a lot to take in in just a few days.</li>
+<li>The GUI (graphical user interface) component of a traditional GIS allows you to explore the wide range of cartographic and analytical options available.</li>
+<li>A GIS is great for visualizing multiple layers of information at once…and catching potential problems early…</li>
 <li>Once you are comfortable with one GIS package, those skills will translate easily to other environments. You’re not just learning a software; you’re learning a way of thinking.</li>
 <li>GIS has amazing functionality, all in one place.</li>
 </ul>
@@ -294,24 +312,89 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="locating-your-data" class="level2">
-<h2 class="anchored" data-anchor-id="locating-your-data">Locating your data</h2>
+<section id="locating-tutorial-data" class="level2">
+<h2 class="anchored" data-anchor-id="locating-tutorial-data">Locating tutorial data</h2>
 <p>All tutorial data for this week are available <a href="../Pages/Data.html">here</a>.</p>
-<p>My recommendation for good data hygiene this week:</p>
+<section id="what-about-other-data" class="level3">
+<h3 class="anchored" data-anchor-id="what-about-other-data">What about other data?</h3>
+<p>For your progettino or other research, you’ll locate data online and then download. Be sure to keep organized!</p>
+<p>That means:</p>
+<ul>
+<li><p>Move data from your Download folder and store somewhere obvious.</p></li>
+<li><p>Keep track of where you found data (e.g., webpage links) and any relevant metadata.</p></li>
+<li><p>When cleaning data and getting ready to work with it, keep a master copy!</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> This holds for tutorial data too, although you can always download a new copy if something goes wrong!</p></li>
+</ul>
+</section>
+</section>
+<section id="data-hygiene" class="level2">
+<h2 class="anchored" data-anchor-id="data-hygiene">Data hygiene</h2>
+<p>My recommendations for good data hygiene this week:</p>
 <ul>
 <li>Create a folder in either Desktop or Documents called GIS_course (or similar). This is where you will save EVERYTHING to do with this week’s work.</li>
 <li>Download the tutorial data files. These are zipped. Expand them and save to your new GIS_Course folder.</li>
+<li>Keep data and QGIS projects together in the same folder.</li>
 </ul>
 </section>
 <section id="opening-qgis-and-getting-started" class="level2">
 <h2 class="anchored" data-anchor-id="opening-qgis-and-getting-started">Opening QGIS and getting started</h2>
 <p>When you open QGIS, you’ll notice that there’s nothing there to work with! You’ll need to add data in order to visualize information, make maps, or perform analysis.</p>
-<p>QGIS is organized with a set of panels that include a directory browser (upper left) and a layers panel (lower left) showing any layers that have been added</p>
-<section id="adding-data" class="level4">
-<h4 class="anchored" data-anchor-id="adding-data">Adding data</h4>
+<section id="adding-data" class="level3">
+<h3 class="anchored" data-anchor-id="adding-data">Adding data</h3>
+<ol type="1">
+<li>Open QGIS.</li>
+<li>The upper left panel provides a browser directory window. Navigate to your GIS_course folder (see image below).</li>
+<li><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Right click on the directory link and add to Favorites. This will make it easier to find your data and projects this week!</li>
+<li>Expand the Rome_Data folder. You should see a cylinder icon and Rome_Data.gpkg. The “gpkg” file suffix indicates a geopackage, a collection of data readable to the GIS. The Rome_Data geopackage contains six layers.</li>
+<li>Let’s see what these data look like! The easiest way to add data in QGIS is to drag and drop—pull the layer down to the Layers panel and watch it appear.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="page_images/QGIS_overview.png" class="img-fluid figure-img"></p>
+<figcaption>QGIS interface overview</figcaption>
+</figure>
+</div>
 </section>
-<section id="qgis-projects-versus-data" class="level3">
-<h3 class="anchored" data-anchor-id="qgis-projects-versus-data">QGIS projects versus data</h3>
+<section id="layer-visibility" class="level3">
+<h3 class="anchored" data-anchor-id="layer-visibility">Layer visibility</h3>
+<ol type="1">
+<li>Add the Airbnb and Cultural Locations layers from the Rome_Data geopackage and note how layers stack up in the Layers window.</li>
+<li>Note how QGIS draws from the bottom layer up (see below). To re-order layers, drag and drop them above and below each other—see how visibility changes?</li>
+<li>Layers can be turned off by unchecking the box next to the layer name. The layer will remain in the project but won’t be visible.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="page_images/QGIS_layers.png" class="img-fluid figure-img"></p>
+<figcaption>QGIS layers</figcaption>
+</figure>
+</div>
+</section>
+<section id="layer-symbology" class="level3">
+<h3 class="anchored" data-anchor-id="layer-symbology">Layer symbology</h3>
+<ol type="1">
+<li>Layer appearances can be changed. This includes fill colors, line thicknesses, and symbol choices, depending on feature type.</li>
+<li>To change feature symbology, double click on a layer&gt;Symbology <em>or</em> right click&gt;Properties&gt;Symbology.</li>
+<li>Clicking on <simple fill=""> (for polygons) will open a range of options for color and outline (“stroke”) width and color.</simple></li>
+</ol>
+<p><i class="fa-solid fa-bell" aria-label="bell"></i> <strong>Your turn</strong>: Adjust the symbology and ordering of the three layers.</p>
+</section>
+</section>
+<section id="qgis-projects-versus-data" class="level2">
+<h2 class="anchored" data-anchor-id="qgis-projects-versus-data">QGIS: projects versus data</h2>
+<p>Like other analytical software applications, QGIS does <em>not</em> store data in the project. What does this mean? When you save your project, you save a set of instructions for which data to include and how to display them (e.g., selections and symbolization). You <strong>don’t</strong> save the layers themselves. They remain in their original location.</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> In short: you want to move data and project together.</p>
+<p>This also means that you can work with the same layers in multiple projects and also that QGIS is very careful about <strong>editing data</strong>.</p>
+</section>
+<section id="getting-help-and-learning-more" class="level2">
+<h2 class="anchored" data-anchor-id="getting-help-and-learning-more">Getting help and learning more</h2>
+<p>The goal of this week’s course is to be comfortable with GIS basics and know how to ask for help—this means, which terms to use, how to troubleshoot basic problems, etc.</p>
+<section id="qgis-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="qgis-documentation">QGIS Documentation</h3>
+<p>QGIS provides excellent <a href="https://docs.qgis.org/3.34/en/docs/training_manual/index.html">documentation and tutorials</a>.</p>
+</section>
+<section id="learning-to-love-google" class="level3">
+<h3 class="anchored" data-anchor-id="learning-to-love-google">Learning to love Google</h3>
+<p>If you have a question, chances are someone’s already asked it on the internet and someone else has answered it. Don’t be afraid to google around for answers.</p>
 
 
 </section>

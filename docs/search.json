@@ -28,7 +28,7 @@
     "href": "Pages/Getting_started_QGIS.html",
     "title": "Getting started with QGIS",
     "section": "",
-    "text": "It’s the 21st century—why are we using a desktop, GUI-based software program? A few reasons:\n\nA GIS like QGIS or ESRI’s ArcGIS Pro provides a soft introduction to spatial thinking, managing spatial data files, and visualising/analyzing information.\nThe GUI (graphical user interface) aspect of a traditional GIS allows you to see the range of options for many of the tools we’ll work with, both cartographical and analytical.\nA GIS is great for visualising multiple layers of information at once…and catching potential problems early…\nOnce you are comfortable with one GIS package, those skills will translate easily to other environments. You’re not just learning a software; you’re learning a way of thinking.\nGIS has amazing functionality, all in one place.",
+    "text": "It’s the 21st century—why are we using a desktop GUI-based software program? A few reasons:\n\nA GIS like QGIS or ESRI’s ArcGIS Pro provides a soft introduction to spatial thinking, managing spatial data files, and visualizing/analyzing information. It’s a lot to take in in just a few days.\nThe GUI (graphical user interface) component of a traditional GIS allows you to explore the wide range of cartographic and analytical options available.\nA GIS is great for visualizing multiple layers of information at once…and catching potential problems early…\nOnce you are comfortable with one GIS package, those skills will translate easily to other environments. You’re not just learning a software; you’re learning a way of thinking.\nGIS has amazing functionality, all in one place.",
     "crumbs": [
       "Home",
       "Monday",
@@ -40,7 +40,7 @@
     "href": "Pages/Getting_started_QGIS.html#first-things-first-why-an-old-school-gis-application",
     "title": "Getting started with QGIS",
     "section": "",
-    "text": "It’s the 21st century—why are we using a desktop, GUI-based software program? A few reasons:\n\nA GIS like QGIS or ESRI’s ArcGIS Pro provides a soft introduction to spatial thinking, managing spatial data files, and visualising/analyzing information.\nThe GUI (graphical user interface) aspect of a traditional GIS allows you to see the range of options for many of the tools we’ll work with, both cartographical and analytical.\nA GIS is great for visualising multiple layers of information at once…and catching potential problems early…\nOnce you are comfortable with one GIS package, those skills will translate easily to other environments. You’re not just learning a software; you’re learning a way of thinking.\nGIS has amazing functionality, all in one place.",
+    "text": "It’s the 21st century—why are we using a desktop GUI-based software program? A few reasons:\n\nA GIS like QGIS or ESRI’s ArcGIS Pro provides a soft introduction to spatial thinking, managing spatial data files, and visualizing/analyzing information. It’s a lot to take in in just a few days.\nThe GUI (graphical user interface) component of a traditional GIS allows you to explore the wide range of cartographic and analytical options available.\nA GIS is great for visualizing multiple layers of information at once…and catching potential problems early…\nOnce you are comfortable with one GIS package, those skills will translate easily to other environments. You’re not just learning a software; you’re learning a way of thinking.\nGIS has amazing functionality, all in one place.",
     "crumbs": [
       "Home",
       "Monday",
@@ -60,11 +60,23 @@
     ]
   },
   {
-    "objectID": "Pages/Getting_started_QGIS.html#locating-your-data",
-    "href": "Pages/Getting_started_QGIS.html#locating-your-data",
+    "objectID": "Pages/Getting_started_QGIS.html#locating-tutorial-data",
+    "href": "Pages/Getting_started_QGIS.html#locating-tutorial-data",
     "title": "Getting started with QGIS",
-    "section": "Locating your data",
-    "text": "Locating your data\nAll tutorial data for this week are available here.\nMy recommendation for good data hygiene this week:\n\nCreate a folder in either Desktop or Documents called GIS_course (or similar). This is where you will save EVERYTHING to do with this week’s work.\nDownload the tutorial data files. These are zipped. Expand them and save to your new GIS_Course folder.",
+    "section": "Locating tutorial data",
+    "text": "Locating tutorial data\nAll tutorial data for this week are available here.\n\nWhat about other data?\nFor your progettino or other research, you’ll locate data online and then download. Be sure to keep organized!\nThat means:\n\nMove data from your Download folder and store somewhere obvious.\nKeep track of where you found data (e.g., webpage links) and any relevant metadata.\nWhen cleaning data and getting ready to work with it, keep a master copy!\n This holds for tutorial data too, although you can always download a new copy if something goes wrong!",
+    "crumbs": [
+      "Home",
+      "Monday",
+      "Getting started with QGIS"
+    ]
+  },
+  {
+    "objectID": "Pages/Getting_started_QGIS.html#data-hygiene",
+    "href": "Pages/Getting_started_QGIS.html#data-hygiene",
+    "title": "Getting started with QGIS",
+    "section": "Data hygiene",
+    "text": "Data hygiene\nMy recommendations for good data hygiene this week:\n\nCreate a folder in either Desktop or Documents called GIS_course (or similar). This is where you will save EVERYTHING to do with this week’s work.\nDownload the tutorial data files. These are zipped. Expand them and save to your new GIS_Course folder.\nKeep data and QGIS projects together in the same folder.",
     "crumbs": [
       "Home",
       "Monday",
@@ -76,7 +88,7 @@
     "href": "Pages/Getting_started_QGIS.html#opening-qgis-and-getting-started",
     "title": "Getting started with QGIS",
     "section": "Opening QGIS and getting started",
-    "text": "Opening QGIS and getting started\nWhen you open QGIS, you’ll notice that there’s nothing there to work with! You’ll need to add data in order to visualize information, make maps, or perform analysis.\nQGIS is organized with a set of panels that include a directory browser (upper left) and a layers panel (lower left) showing any layers that have been added\n\nAdding data\n\n\nQGIS projects versus data",
+    "text": "Opening QGIS and getting started\nWhen you open QGIS, you’ll notice that there’s nothing there to work with! You’ll need to add data in order to visualize information, make maps, or perform analysis.\n\nAdding data\n\nOpen QGIS.\nThe upper left panel provides a browser directory window. Navigate to your GIS_course folder (see image below).\n Right click on the directory link and add to Favorites. This will make it easier to find your data and projects this week!\nExpand the Rome_Data folder. You should see a cylinder icon and Rome_Data.gpkg. The “gpkg” file suffix indicates a geopackage, a collection of data readable to the GIS. The Rome_Data geopackage contains six layers.\nLet’s see what these data look like! The easiest way to add data in QGIS is to drag and drop—pull the layer down to the Layers panel and watch it appear.\n\n\n\n\nQGIS interface overview\n\n\n\n\nLayer visibility\n\nAdd the Airbnb and Cultural Locations layers from the Rome_Data geopackage and note how layers stack up in the Layers window.\nNote how QGIS draws from the bottom layer up (see below). To re-order layers, drag and drop them above and below each other—see how visibility changes?\nLayers can be turned off by unchecking the box next to the layer name. The layer will remain in the project but won’t be visible.\n\n\n\n\nQGIS layers\n\n\n\n\nLayer symbology\n\nLayer appearances can be changed. This includes fill colors, line thicknesses, and symbol choices, depending on feature type.\nTo change feature symbology, double click on a layer&gt;Symbology or right click&gt;Properties&gt;Symbology.\nClicking on  (for polygons) will open a range of options for color and outline (“stroke”) width and color.\n\n Your turn: Adjust the symbology and ordering of the three layers.",
     "crumbs": [
       "Home",
       "Monday",
@@ -84,16 +96,49 @@
     ]
   },
   {
-    "objectID": "Pages/Introduction_page.html",
-    "href": "Pages/Introduction_page.html",
-    "title": "Let’s Go!",
-    "section": "",
-    "text": "This afternoon is a quick session for us to get to know each other, talk about how the week will be structured, and get an introduction to thinking spatially, how a GIS can be helpful, and the basics of QGIS.",
+    "objectID": "Pages/Getting_started_QGIS.html#qgis-projects-versus-data",
+    "href": "Pages/Getting_started_QGIS.html#qgis-projects-versus-data",
+    "title": "Getting started with QGIS",
+    "section": "QGIS: projects versus data",
+    "text": "QGIS: projects versus data\nLike other analytical software applications, QGIS does not store data in the project. What does this mean? When you save your project, you save a set of instructions for which data to include and how to display them (e.g., selections and symbolization). You don’t save the layers themselves. They remain in their original location.\n In short: you want to move data and project together.\nThis also means that you can work with the same layers in multiple projects and also that QGIS is very careful about editing data.",
     "crumbs": [
       "Home",
       "Monday",
-      "Let's Go!"
+      "Getting started with QGIS"
     ]
+  },
+  {
+    "objectID": "Pages/Getting_started_QGIS.html#getting-help-and-learning-more",
+    "href": "Pages/Getting_started_QGIS.html#getting-help-and-learning-more",
+    "title": "Getting started with QGIS",
+    "section": "Getting help and learning more",
+    "text": "Getting help and learning more\nThe goal of this week’s course is to be comfortable with GIS basics and know how to ask for help—this means, which terms to use, how to troubleshoot basic problems, etc.\n\nQGIS Documentation\nQGIS provides excellent documentation and tutorials.\n\n\nLearning to love Google\nIf you have a question, chances are someone’s already asked it on the internet and someone else has answered it. Don’t be afraid to google around for answers.",
+    "crumbs": [
+      "Home",
+      "Monday",
+      "Getting started with QGIS"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "What to Expect: Summer 2024",
+    "section": "",
+    "text": "This short course introduces students to the fundamentals of GIS: locating, importing, and visualizing spatial data, as well as common spatial analysis methods and approaches. Each day’s activity is organized around short lectures, complemented by hands-on tutorials and independent work that provide structured practice working with data, software, and common spatial methods."
+  },
+  {
+    "objectID": "index.html#schedule-tentative",
+    "href": "index.html#schedule-tentative",
+    "title": "What to Expect: Summer 2024",
+    "section": "Schedule (tentative)",
+    "text": "Schedule (tentative)\n\nMonday\n\n16:30–16:45: Introductions!\n16:45–17:30: Why GIS?\n17:30–18:30: QGIS tour\n\n\n\nTuesday\n\n9:00–9:30: Important GIS ground rules\n9:30–11:00: Tutorial 1\n\n\n\nWednesday\n\n9:00–9:30: Recap and question time\n9:30–10:30: Cartography basics\n10:30–10:45: Break!\n10:45–13:00: Tutorial 2\n13:00–14:30: Lunch\n14:30–15:30: Common GIS methods and tools, Part 1\n15:30–17:00: Tutorial 3\n\n\n\nThursday\n\n9:00–9:30: Recap and question time\n9:30–10:00: Common GIS methods and tools, Part 2\n10:00–11:00: Tutorial 4\n11:00–11:15: Break!\n11:15–12:30: Tutorial 4 continued\n13:00–14:30: Lunch\n14:30–17:00: Project work and discussion\n\n\n\nFriday\n\n9:00–13:00: Project work and discussion\n13:00–14:30: Lunch\n14:30–15:30: Progettino presentations"
+  },
+  {
+    "objectID": "index.html#il-progettino",
+    "href": "index.html#il-progettino",
+    "title": "What to Expect: Summer 2024",
+    "section": "Il Progettino",
+    "text": "Il Progettino\nThe best way to learn new tools and software applications is through independent work—and if you really want to see how spatial data and methods can be useful in your own research, you’ve got to try it! That’s why a core component of GIS@GSSI is the progettino, a mini-project that you work on over the course of the week and present to the group on Friday afternoon."
   },
   {
     "objectID": "Lectures/Introductions.html#what-are-the-pathways-of-population-change-across-the-u.s.",
@@ -257,25 +302,28 @@
     "text": "Source: Sonya Gurwitt class project"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "What to Expect: Summer 2024",
+    "objectID": "Pages/Introduction_page.html",
+    "href": "Pages/Introduction_page.html",
+    "title": "Let’s Go!",
     "section": "",
-    "text": "This short course introduces students to the fundamentals of GIS: locating, importing, and visualizing spatial data, as well as common spatial analysis methods and approaches. Each day’s activity is organized around short lectures, complemented by hands-on tutorials and independent work that provide structured practice working with data, software, and common spatial methods."
+    "text": "This afternoon is a quick session for us to get to know each other, talk about how the week will be structured, and get an introduction to thinking spatially, how a GIS can be helpful, and the basics of QGIS.",
+    "crumbs": [
+      "Home",
+      "Monday",
+      "Let's Go!"
+    ]
   },
   {
-    "objectID": "index.html#schedule-tentative",
-    "href": "index.html#schedule-tentative",
-    "title": "What to Expect: Summer 2024",
-    "section": "Schedule (tentative)",
-    "text": "Schedule (tentative)\n\nMonday\n\n16:30–16:45: Introductions!\n16:45–17:30: Why GIS?\n17:30–18:30: QGIS tour\n\n\n\nTuesday\n\n9:00–9:30: Important GIS ground rules\n9:30–11:00: Tutorial 1\n\n\n\nWednesday\n\n9:00–9:30: Recap and question time\n9:30–10:30: Cartography basics\n10:30–10:45: Break!\n10:45–13:00: Tutorial 2\n13:00–14:30: Lunch\n14:30–15:30: Common GIS methods and tools, Part 1\n15:30–17:00: Tutorial 3\n\n\n\nThursday\n\n9:00–9:30: Recap and question time\n9:30–10:00: Common GIS methods and tools, Part 2\n10:00–11:00: Tutorial 4\n11:00–11:15: Break!\n11:15–12:30: Tutorial 4 continued\n13:00–14:30: Lunch\n14:30–17:00: Project work and discussion\n\n\n\nFriday\n\n9:00–13:00: Project work and discussion\n13:00–14:30: Lunch\n14:30–15:30: Progettino presentations"
-  },
-  {
-    "objectID": "index.html#il-progettino",
-    "href": "index.html#il-progettino",
-    "title": "What to Expect: Summer 2024",
-    "section": "Il Progettino",
-    "text": "Il Progettino\nThe best way to learn new tools and software applications is through independent work—and if you really want to see how spatial data and methods can be useful in your own research, you’ve got to try it! That’s why a core component of GIS@GSSI is the progettino, a mini-project that you work on over the course of the week and present to the group on Friday afternoon."
+    "objectID": "Pages/GIS_rules.html",
+    "href": "Pages/GIS_rules.html",
+    "title": "The GIS Commandments",
+    "section": "",
+    "text": "1. Thou shalt not work from the Downloads folder.\n\n\n2. Thou shalt not move spatial data around using OS Finder or Windows Explorer.\n\n\n3. Know your projection.\n\n\n4. Save your project early and often!\n\n\n5. Do not be afraid to google.",
+    "crumbs": [
+      "Home",
+      "Monday",
+      "The GIS Commandments"
+    ]
   },
   {
     "objectID": "Pages/Finding_spatial_data.html",
