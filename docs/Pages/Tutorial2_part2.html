@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GIS@GSSI - Cartography 101</title>
+<title>GIS@GSSI - Bonus Mapping Practice</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Pages/Cartography_101.html">Wednesday</a></li><li class="breadcrumb-item"><a href="../Pages/Cartography_101.html">Cartography 101</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Pages/Cartography_101.html">Wednesday</a></li><li class="breadcrumb-item"><a href="../Pages/Tutorial2_part2.html">Bonus Mapping Practice</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -192,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Pages/Cartography_101.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Pages/Cartography_101.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cartography 101</span></a>
   </div>
 </li>
@@ -204,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Pages/Tutorial2_part2.html" class="sidebar-item-text sidebar-link">
+  <a href="../Pages/Tutorial2_part2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Bonus Mapping Practice</span></a>
   </div>
 </li>
@@ -272,9 +272,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Pages/Cartography_101.html">Wednesday</a></li><li class="breadcrumb-item"><a href="../Pages/Cartography_101.html">Cartography 101</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Pages/Cartography_101.html">Wednesday</a></li><li class="breadcrumb-item"><a href="../Pages/Tutorial2_part2.html">Bonus Mapping Practice</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Cartography 101</h1>
+<h1 class="title">Bonus Mapping Practice</h1>
 </div>
 
 
@@ -291,9 +291,52 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Good morning! Today is a big day! We start with cartography in the morning and transition to spatial analysis in the afternoon.</p>
-<iframe class="slide-deck" src="../Lectures/Cartography_lecture.html" height="420" width="750" style="border: 1px solid #2e3846;">
-</iframe>
+<p>This bonus practical provides some additional practice mapping and also illustrates how table joins work (and are awesome).</p>
+<ol type="1">
+<li><p>Start a new project.</p></li>
+<li><p>From the <a href="../Pages/Data.html">“EU_Mapping_Example” data</a>, add the NUTS2 regions.</p></li>
+</ol>
+<p><i class="fa-solid fa-circle-exclamation" aria-label="circle-exclamation"></i> Save your project!</p>
+<ol start="3" type="1">
+<li><p>Have a look at the attribute table by right clicking on the layer and selecting Open Attribute Table. You’ll notice that all we have here are region names and codes, but no additional contextual data.</p></li>
+<li><p>However, we do have Total Fertility Rate data for 2020 in an aspatial spreadsheet format (yay!). To look at this data in QGIS, we need to load the file into the project.</p>
+<p>Open your Data Source Manager by clicking on the Data Source Manager icon <img src="page_images/Data_source_manager_icon.png" class="img-fluid" style="width:4.0%">. Navigate to the NUTS2 Total Fertility csv spreadsheet in the EU Mapping Example folder and click on it. Click Add and Close.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="page_images/adding_csv_tutorial2_part2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<ol start="5" type="1">
+<li><p>You should see the table appear in your layer list, but of course nothing will happen on your map (why?).</p></li>
+<li><p>Right click on your Fertility table and have a look at the attributes. Everything looks good: we have Name, a code, and a TFR_2020 variable. Close the table.</p>
+<p>Now go to Properties&gt;Information and scroll down.</p>
+<p><i class="fa-solid fa-circle-exclamation" aria-label="circle-exclamation"></i> We want to check that the variables have been imported in the correct format—most importantly, that TFR_2020 has been imported as a <strong>number</strong> (double or integer) and <em>not text</em> (text or string). Text variables cannot be mapped in the same way as numerical information. Close the Properties window.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="page_images/field_types_tutorial2_part2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<ol start="7" type="1">
+<li><p>A common way of getting data into a GIS is to find information in a spreadsheet that can then be combined with the layer attribute table. This is referred to as “joining tables” in a GIS and requires a common column—or primary key–of information in both tables that allows them to be merged into one bigger table that combines both contextual data and location information for each observation.</p>
+<p>This primary key must uniquely identify each observation. Names of areas, such as “Haute-Normandie”, are one option but if Haute-Normandie is referred to as “Haute-Normandie” in one data source and “Haute Normandie” in the other, the GIS won’t know to match them. For this reason, we generally rely on unique identifier codes.</p>
+<p>Let’s join our Fertility data to the NUTS2 layer. To do this, have a look at both attribute tables and identify which variable both tables have in common.</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Note: the variable names do not have to be the same! However, their format (e.g., text) and contents do have to be the same. Here, <strong>GEO_codes</strong> and <strong>NUTS_ID</strong> contain the same information.</p>
+<p>Right click on the NUTS2 Layer, go to Properties and then choose Joins <img src="page_images/join_icon.png" class="img-fluid" style="width:12.0%">. Click on the <img src="page_images/new_join_icon.png" class="img-fluid" style="width:5.0%"> the bottom of the interface and a new window will open. Here is where you specify which table to join to the layer attribute table and which codes to use. Click OK and then Apply and OK in the Join window.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="page_images/join_interface_tutorial2_part2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+<ul>
+<li><p>To see if the join worked, open the layer attribute table and scroll to the end. You should see the TFR_2020 variable from the csv table appended at the end. (you can also go directly to Symbology and map the TFR variable)</p>
+<p><i class="fa-solid fa-circle-exclamation" aria-label="circle-exclamation"></i> Important note: No new data have been created! <strong>If you are happy with the join, right click on the layer and choose Export&gt;Save Features As…</strong> and save a new layer in your GeoPackage called NUTS2_TFR_2020. The new layer should be automatically added to your project.</p></li>
+</ul>
+<ol start="8" type="1">
+<li>Now we are ready to classify and symbolise the data and then make a map!</li>
+</ol>
 
 
 

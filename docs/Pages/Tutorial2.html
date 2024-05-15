@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GIS@GSSI - Cartography 101</title>
+<title>GIS@GSSI - Tutorial 2: Cartography Basics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Pages/Cartography_101.html">Wednesday</a></li><li class="breadcrumb-item"><a href="../Pages/Cartography_101.html">Cartography 101</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Pages/Cartography_101.html">Wednesday</a></li><li class="breadcrumb-item"><a href="../Pages/Tutorial2.html">Tutorial 2: Cartography Basics</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -192,13 +192,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Pages/Cartography_101.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Pages/Cartography_101.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cartography 101</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Pages/Tutorial2.html" class="sidebar-item-text sidebar-link">
+  <a href="../Pages/Tutorial2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Tutorial 2: Cartography Basics</span></a>
   </div>
 </li>
@@ -266,20 +266,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#first-things-firstsome-preliminaries" id="toc-first-things-firstsome-preliminaries" class="nav-link active" data-scroll-target="#first-things-firstsome-preliminaries">First Things First–Some Preliminaries</a></li>
+  <li><a href="#side-by-side-maps-of-expensive-airbnbs-and-cultural-locations" id="toc-side-by-side-maps-of-expensive-airbnbs-and-cultural-locations" class="nav-link" data-scroll-target="#side-by-side-maps-of-expensive-airbnbs-and-cultural-locations">Side-by-Side Maps of Expensive AirBnbs and Cultural Locations</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Pages/Cartography_101.html">Wednesday</a></li><li class="breadcrumb-item"><a href="../Pages/Cartography_101.html">Cartography 101</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Pages/Cartography_101.html">Wednesday</a></li><li class="breadcrumb-item"><a href="../Pages/Tutorial2.html">Tutorial 2: Cartography Basics</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Cartography 101</h1>
+<h1 class="title">Tutorial 2: Cartography Basics</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta column-body">
 
     
   
@@ -291,11 +298,92 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Good morning! Today is a big day! We start with cartography in the morning and transition to spatial analysis in the afternoon.</p>
-<iframe class="slide-deck" src="../Lectures/Cartography_lecture.html" height="420" width="750" style="border: 1px solid #2e3846;">
-</iframe>
+<p>With this practical, we work on our formal cartographic expertise and expand our knowledge of QGIS functionality. By the end of this practical, you should know how to:</p>
+<ul>
+<li>Design and export a map that includes proper symbology and map elements</li>
+<li>Select features by their attributes and generate a new layer from the selection</li>
+<li>Label features</li>
+<li>Make a map that includes insets or multiple panels</li>
+</ul>
+<section id="first-things-firstsome-preliminaries" class="level2">
+<h2 class="anchored" data-anchor-id="first-things-firstsome-preliminaries">First Things First–Some Preliminaries</h2>
+<ol type="1">
+<li><p>Get set up with your data: it should still be on your desktop (or wherever you’re saving to). Otherwise, you can <a href="../Pages/Data.html">re-download</a>.</p></li>
+<li><p>Start a new QGIS project and navigate to your data. Add the following layers: AirBnbs, Waterways, Cultural Locations, and Neighbourhoods. Save your project (<i class="fa-solid fa-circle-exclamation" aria-label="circle-exclamation"></i> always save!!!)</p></li>
+</ol>
+</section>
+<section id="side-by-side-maps-of-expensive-airbnbs-and-cultural-locations" class="level2">
+<h2 class="anchored" data-anchor-id="side-by-side-maps-of-expensive-airbnbs-and-cultural-locations">Side-by-Side Maps of Expensive AirBnbs and Cultural Locations</h2>
+<p>(here, we’ll design one layout containing two maps)</p>
+<ol start="3" type="1">
+<li>First off, let’s create a layer of AirBnbs that are the entire house/apartment and that cost at least 5000/night.</li>
+</ol>
+<ul>
+<li><p>Use an attribute query to select all AirBnbs that are the entire house/apt. You may still have this layer (“AirBnb_entire_home”)—feel free to open it and use it; otherwise, re-create using steps in the first Tutorial.</p></li>
+<li><p>Using the “AirBnb_entire_home” layer, we want to select AirBnbs that cost 5000 or more per night (there should be 56) and then create a new layer (Export&gt;Save Selected Features), called AirBnb_5000_or_more_entire_home.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="page_images/selection_expensive.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<ol start="4" type="1">
+<li><p>Symbolisation of AirBnbs: In your new layer, open Properties and go to Symbology. To visualise a continuous variable such as price, we need to select “Graduated” from the symbology options at the top. For Value, scroll down to the “price” variable.</p>
+<p>Now, for symbolisation, we have a choice between color and symbol size. In fact, there are many choices, including symbol choice, number of classes, and classification scheme. Work through your choices and then click Classify at the bottom.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="page_images/symbolization_options_airbnb.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<ol start="5" type="1">
+<li><p>Now spend some time choosing symbology for your Waterways and Neighbourhoods background colours (fill and border). You’re looking for an appealing combination of colours and symbology that still foregrounds the AirBnb data.</p></li>
+<li><p>Layout: Create a new print layout <img src="page_images/print_layout_icon.png" class="img-fluid" style="width:4.0%"> and insert a new map window <img src="page_images/add_map_icon.png" class="img-fluid" style="width:4.0%"> to take up about half your page in landscape view (see below). Scale of around 450,000 is about right.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="page_images/map_layout_tutorial2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p><i class="fa-solid fa-circle-exclamation" aria-label="circle-exclamation"></i> Save!</p>
+<ol start="7" type="1">
+<li><p>Now use the options on the left of the Layout window to add a Legend, North arrow, and scale bar. Note that each of these items has its own Properties, which can be viewed on the right of your screen. These include fonts, font size, and many other choices. Take your time exploring.</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Hint: Legends can be edited by turning off “Auto Update” and then deleting unused layers and changing variable names.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="page_images/legend_items_tutorial2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<ol start="8" type="1">
+<li><p>This is half of the map layout. When we go back to the main window, however, any changes we make to layers will automatically refresh in this map window.</p>
+<p>To avoid this, under the Map’s main properties and Layer, click “Lock Layers” and “Lock Styles for Layers”.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="page_images/lock_layers_tutorial2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<ol start="9" type="1">
+<li><p>Now go back to the main QGIS window, turn off the AirBnb layer, and turn on Cultural Locations.</p></li>
+<li><p>Almost there! Symbolise your Cultural Locations layer, keeping in mind you want your choices to match well with the AirBnb map.</p></li>
+<li><p>Create a second map in your layout that shows Cultural Locations and Neighbourhoods.</p></li>
+<li><p>Finalise and export your map layout. Your final map should include:</p></li>
+</ol>
+<ul>
+<li><p>Title</p></li>
+<li><p>Your name</p></li>
+<li><p>Legends, scale bars, and North arrows for both maps</p></li>
+<li><p>Sensible names for variables in your legend</p></li>
+<li><p>Map windows aligned and of the same size</p>
+<ul>
+<li><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Hint: these tools in layout view assist with alignment, etc. <img src="page_images/alignment_tools_tutorial2.png" class="img-fluid" style="width:40.0%"></li>
+</ul></li>
+<li><p>Both maps at the same scale</p></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
