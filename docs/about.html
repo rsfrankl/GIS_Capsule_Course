@@ -70,6 +70,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="./Styles/website_styles.scss">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -168,8 +169,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Pages/QGIS_basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">QGIS Basics</span></a>
+  <a href="./Pages/GIS_basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Important GIS Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -205,6 +206,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./Pages/Tutorial2_part2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bonus Mapping Practice</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Pages/Intro_spatial_analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Spatial Analysis</span></a>
   </div>
 </li>
       </ul>
@@ -265,11 +272,19 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#about-qgisgssi" id="toc-about-qgisgssi" class="nav-link active" data-scroll-target="#about-qgisgssi">About QGIS@GSSI</a></li>
+  <li><a href="#about-your-course-lead-rachel-franklin" id="toc-about-your-course-lead-rachel-franklin" class="nav-link" data-scroll-target="#about-your-course-lead-rachel-franklin">About your course lead: Rachel Franklin</a></li>
+  <li><a href="#about-these-teaching-materials" id="toc-about-these-teaching-materials" class="nav-link" data-scroll-target="#about-these-teaching-materials">About these teaching materials</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -278,7 +293,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta column-body">
 
     
   
@@ -290,8 +305,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="about-qgisgssi" class="level2">
+<h2 class="anchored" data-anchor-id="about-qgisgssi">About QGIS@GSSI</h2>
+<p>These materials support the summer course in spatial data, visualization, and GIS in the <a href="https://www.gssi.it/education/regional-science-economic-geography">Regional Science and Economic Geography</a> program at the <a href="https://www.gssi.it">Gran Sasso Science Institute</a> (GSSI) in L’Aquila, Italy.</p>
+</section>
+<section id="about-your-course-lead-rachel-franklin" class="level2">
+<h2 class="anchored" data-anchor-id="about-your-course-lead-rachel-franklin">About your course lead: Rachel Franklin</h2>
+<p>I’m a quantitative human geographer in the <a href="https://www.ncl.ac.uk/curds/">Centre for Urban and Regional Development Studies</a> (CURDS) at Newcastle University. I’m also the group lead for liveability in the <a href="https://www.turing.ac.uk/research/research-programmes/urban-analytics">Science of Cities and Regions Programme</a> at <a href="https://www.turing.ac.uk">The Alan Turing Institute</a>, the UK’s national institute for data science and AI.</p>
+<p>I’ve taught spatial analysis GIS to a range of audiences for almost 15 years, including several times at the GSSI, and have taught quantitative and demographic methods for over 20 years.</p>
+<p>You can find out more about me <a href="https://www.rachelfranklin.org">here</a> and <a href="https://www.ncl.ac.uk/curds/people/staffprofile/rachelfranklin.html#background">here</a>.</p>
+</section>
+<section id="about-these-teaching-materials" class="level2">
+<h2 class="anchored" data-anchor-id="about-these-teaching-materials">About these teaching materials</h2>
+<p>These materials are aimed at students who are experts in something <em>other</em> than geography and spatial analysis. The primary goal is twofold: to illustrate the potential and utlity of spatial thinking and methods and to provide a user-friendly introduction to applying spatial thinking and methods.</p>
+<p>The code and license for all these materials can be found on GitHub <a href="https://github.com/rsfrankl/GIS_capsule_course"><i class="fa-brands fa-github" aria-label="github"></i></a>.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

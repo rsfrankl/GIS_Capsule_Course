@@ -168,191 +168,163 @@
     ]
   },
   {
-    "objectID": "Pages/Tutorial2_part2.html",
-    "href": "Pages/Tutorial2_part2.html",
-    "title": "Bonus Mapping Practice",
+    "objectID": "Pages/Introduction_page.html",
+    "href": "Pages/Introduction_page.html",
+    "title": "Let’s Go!",
     "section": "",
-    "text": "This bonus practical provides some additional practice mapping and also illustrates how table joins work (and are awesome).\n\nStart a new project.\nFrom the “EU_Mapping_Example” data, add the NUTS2 regions.\n\n Save your project!\n\nHave a look at the attribute table by right clicking on the layer and selecting Open Attribute Table. You’ll notice that all we have here are region names and codes, but no additional contextual data.\nHowever, we do have Total Fertility Rate data for 2020 in an aspatial spreadsheet format (yay!). To look at this data in QGIS, we need to load the file into the project.\nOpen your Data Source Manager by clicking on the Data Source Manager icon . Navigate to the NUTS2 Total Fertility csv spreadsheet in the EU Mapping Example folder and click on it. Click Add and Close.\n\n\n\n\n\n\n\nYou should see the table appear in your layer list, but of course nothing will happen on your map (why?).\nRight click on your Fertility table and have a look at the attributes. Everything looks good: we have Name, a code, and a TFR_2020 variable. Close the table.\nNow go to Properties&gt;Information and scroll down.\n We want to check that the variables have been imported in the correct format—most importantly, that TFR_2020 has been imported as a number (double or integer) and not text (text or string). Text variables cannot be mapped in the same way as numerical information. Close the Properties window.\n\n\n\n\n\n\n\nA common way of getting data into a GIS is to find information in a spreadsheet that can then be combined with the layer attribute table. This is referred to as “joining tables” in a GIS and requires a common column—or primary key–of information in both tables that allows them to be merged into one bigger table that combines both contextual data and location information for each observation.\nThis primary key must uniquely identify each observation. Names of areas, such as “Haute-Normandie”, are one option but if Haute-Normandie is referred to as “Haute-Normandie” in one data source and “Haute Normandie” in the other, the GIS won’t know to match them. For this reason, we generally rely on unique identifier codes.\nLet’s join our Fertility data to the NUTS2 layer. To do this, have a look at both attribute tables and identify which variable both tables have in common.\n Note: the variable names do not have to be the same! However, their format (e.g., text) and contents do have to be the same. Here, GEO_codes and NUTS_ID contain the same information.\nRight click on the NUTS2 Layer, go to Properties and then choose Joins . Click on the  the bottom of the interface and a new window will open. Here is where you specify which table to join to the layer attribute table and which codes to use. Click OK and then Apply and OK in the Join window.\n\n\n\n\n\n\n\nTo see if the join worked, open the layer attribute table and scroll to the end. You should see the TFR_2020 variable from the csv table appended at the end. (you can also go directly to Symbology and map the TFR variable)\n Important note: No new data have been created! If you are happy with the join, right click on the layer and choose Export&gt;Save Features As… and save a new layer in your GeoPackage called NUTS2_TFR_2020. The new layer should be automatically added to your project.\n\n\nNow we are ready to classify and symbolise the data and then make a map!",
+    "text": "This afternoon is a quick session for us to get to know each other, talk about how the week will be structured, and get an introduction to thinking spatially, how a GIS can be helpful, and the basics of QGIS.",
     "crumbs": [
       "Home",
-      "Wednesday",
-      "Bonus Mapping Practice"
+      "Monday",
+      "Let's Go!"
     ]
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#racial-segregation-in-detroit-michigan",
-    "href": "Lectures/Cartography_lecture.html#racial-segregation-in-detroit-michigan",
-    "title": "Cartography 101",
-    "section": "Racial segregation in Detroit, Michigan",
-    "text": "Racial segregation in Detroit, Michigan\n\nSources: http://www.wired.com/2013/08/how-segregated-is-your-city-this-eye-opening-map-shows-you/?viewall=true; http://demographics.coopercenter.org/DotMap/index.html"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#spatial-analysis-for-urban-and-regional-analysis",
+    "href": "Lectures/Spatial_analysis_lecture1.html#spatial-analysis-for-urban-and-regional-analysis",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "Spatial analysis for urban and regional analysis",
+    "text": "Spatial analysis for urban and regional analysis\nOften we use spatial analysis tools to extract information\n\nLength of paved road in a region\nNumber of universities in a place\nNumber of inhabitants within a distance of a service\nArea within a distance of a road or feature (like a bus stop or metro station)"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#representing-different-kinds-of-information",
-    "href": "Lectures/Cartography_lecture.html#representing-different-kinds-of-information",
-    "title": "Cartography 101",
-    "section": "Representing different kinds of information",
-    "text": "Representing different kinds of information\nThe way in which we display data on the map needs to match not only the type of data but also the type of feature\n\nNominal – labels\nCategorical – different symbol or color for each category\nOrdinal – we want to use color or symbol size to convey the increase in value that goes with each category\n\nGraduated or proportional symbol maps.\n\n\nNumerical – for points and lines, we use lines thickness or symbol size to express variations in value\n\nFor polygons we use graduated color or choropleth maps\nSingle color that changes in intensity to convey changes in value\nSometimes two colors are used"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#a-variety-of-types-of-spatial-analysis",
+    "href": "Lectures/Spatial_analysis_lecture1.html#a-variety-of-types-of-spatial-analysis",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "A variety of types of spatial analysis",
+    "text": "A variety of types of spatial analysis\nAccording to Longley\n\nQueries and reasoning – no changes are made to the database and no new information is produced\n\ne.g., how many cities within 300km of L’Aquila?\n\nMeasurements – Describing aspects of geographic data, like length, area, or shape\n\nFor example, calculating the size (or area) of a parcel\n\nTransformations – Changing or combining data to create new data Using logical, mathematical, or geometrical rules\nDescriptive summaries – summary statistics for spatial data\nOptimization – Finding the best locations for a set of objects\n\nFor example, best locations for public services\n\nHypothesis testing – Making generalizations about a population from a sample\n\nCould this spatial pattern have occurred by chance?"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#classification-schemes",
-    "href": "Lectures/Cartography_lecture.html#classification-schemes",
-    "title": "Cartography 101",
-    "section": "Classification Schemes",
-    "text": "Classification Schemes\nMapping continuous data means we need a meaningful way to create categories – this is called classification\n\nSimilar to choices that are made in generating a histogram\nHow we allocate values to categories will affect our final map\n\nThis means number of categories\nBut also the classification scheme itself\n\nIdeally you are able to justify your choices (good general advice!)\n\nWhat is the takeaway message you want to convey?\nWho is your audience?"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#types-of-spatial-analysis",
+    "href": "Lectures/Spatial_analysis_lecture1.html#types-of-spatial-analysis",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "Types of spatial analysis",
+    "text": "Types of spatial analysis\ncontinued\n\nWe’ve covered queries and reasoning\nMeasurement is either embedded in feature class information (e.g., length of a line segment) or is straightforwardly calculated in a GIS—this is GIS bread and butter functionality!\nThis lecture focuses on transformations"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#types-of-classification",
-    "href": "Lectures/Cartography_lecture.html#types-of-classification",
-    "title": "Cartography 101",
-    "section": "Types of classification",
-    "text": "Types of classification\n\nNatural breaks (Jenks) – looks at the distribution of values and sets the break points at “natural breaks” in the data\nEqual interval – Creates a set number of classes of equal size\nFixed interval – Same as equal interval, except you decide the size of the interval and the number of classes depends on that decision (e.g., by 1,000s)\nQuantile (equal count) – puts the same number of features into each class\nStandard deviation – creates categories based on the number of standard deviations away from the mean\nPretty breaks – Breaks categories at round numbers\nManual – you choose the break points yourself"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#transformations",
+    "href": "Lectures/Spatial_analysis_lecture1.html#transformations",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "Transformations",
+    "text": "Transformations\n\nBuffers – Create an area of a specific and constant width around a point, line, or polygon This can be used to identify all objects falling within a certain distance of the original feature\nPoint in polygon – Associates points with polygons\n\nCounts the number of points within a polygon or…Attaches polygon characteristics to points\nThis is usually what people mean when they refer to a spatial join\n\nPolygon overlay – Determining whether two polygons overlap, the extent of their overlap, and what new polygons are created by the overlap\n\nCan be thought of as an intersection or a union of units and information\n\nSpatial interpolation – Estimating the value of a variable for locations where no measurement has occurred. For example, rainfall, temperature, or elevation\n\ne.g., Inverse distance weighting or Kriging\n\nDensity estimation and potential – generates a surface from a set of discrete points"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#qgis-symbology-interface",
-    "href": "Lectures/Cartography_lecture.html#qgis-symbology-interface",
-    "title": "Cartography 101",
-    "section": "QGIS symbology interface",
-    "text": "QGIS symbology interface"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#qgis-pulldown-menus",
+    "href": "Lectures/Spatial_analysis_lecture1.html#qgis-pulldown-menus",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "QGIS pulldown menus",
+    "text": "QGIS pulldown menus\n\n\nCheck out all the options!"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#what-if-we-look-at-the-histogram",
-    "href": "Lectures/Cartography_lecture.html#what-if-we-look-at-the-histogram",
-    "title": "Cartography 101",
-    "section": "What if we look at the histogram?",
-    "text": "What if we look at the histogram?"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#qgis-toolbox",
+    "href": "Lectures/Spatial_analysis_lecture1.html#qgis-toolbox",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "QGIS toolbox",
+    "text": "QGIS toolbox\n\n\n\nLocated on the main QGIS toolbar\nCan be overwhelming—take the time to poke around\nMost tools wook with a common interface/intuition\n\nPractice makes…comfortable (if not perfect)\n\nSearch is your friend\n\nThe key is to know what tools you are searching for!"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#what-do-we-need-to-think-about",
-    "href": "Lectures/Cartography_lecture.html#what-do-we-need-to-think-about",
-    "title": "Cartography 101",
-    "section": "What do we need to think about?",
-    "text": "What do we need to think about?\n\nMap elements – the pieces of a map that make it a finished (and polished product)\n\nIndividual elements should contribute to conveying information, not detract from it\nLimit clumping together of elements\nLimit use of multiple fonts and colors\n\nMap symbology – the way in which the information the map conveys is portrayed\n\nColors – hue, intensity, and saturation\nSymbols – size and type\n\nBy necessity, maps are selective of the information they show and information is generalized"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#buffers",
+    "href": "Lectures/Spatial_analysis_lecture1.html#buffers",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "Buffers",
+    "text": "Buffers\nCreates a new layer of polygons around a set of input features"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#choosing-symbols-and-colors",
-    "href": "Lectures/Cartography_lecture.html#choosing-symbols-and-colors",
-    "title": "Cartography 101",
-    "section": "Choosing symbols and colors",
-    "text": "Choosing symbols and colors\n\nBeauty is in the eye of the beholder, but there are some general guidelines!\nWater and land should not be given unusual colors—e.g., water is blue not red\nIncreased thickness of lines or larger symbols should match increased value\nDarker or more intense colors usually go with higher values\nIf you use a color ramp with two colors, your data should also reflect two extremes in value—for example, in and out migration or voting patterns\nAvoid mixing and matching lots of different patterns on the same map—the eye can’t handle it"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#appealing-way-to-visualise-and-calculate-areas-surrounding-features",
+    "href": "Lectures/Spatial_analysis_lecture1.html#appealing-way-to-visualise-and-calculate-areas-surrounding-features",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "Appealing way to visualise and calculate areas surrounding features",
+    "text": "Appealing way to visualise and calculate areas surrounding features"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#for-those-who-like-colorcolor-brewer",
-    "href": "Lectures/Cartography_lecture.html#for-those-who-like-colorcolor-brewer",
-    "title": "Cartography 101",
-    "section": "For those who like color—Color Brewer!",
-    "text": "For those who like color—Color Brewer!\n\nSource: https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#appealing-way-to-visualise-and-calculate-areas-surrounding-features-1",
+    "href": "Lectures/Spatial_analysis_lecture1.html#appealing-way-to-visualise-and-calculate-areas-surrounding-features-1",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "Appealing way to visualise and calculate areas surrounding features",
+    "text": "Appealing way to visualise and calculate areas surrounding features"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#what-makes-a-map",
-    "href": "Lectures/Cartography_lecture.html#what-makes-a-map",
-    "title": "Cartography 101",
-    "section": "What makes a map?",
-    "text": "What makes a map?\n\n\n\n\nCartographic elements\n\nMap object\nTitle\nNeatline\nScale bar\nLegend\nNorth arrow\nInset map"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#why-would-we-want-buffers-what-purpose-do-they-serve",
+    "href": "Lectures/Spatial_analysis_lecture1.html#why-would-we-want-buffers-what-purpose-do-they-serve",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "Why would we want buffers? What purpose do they serve?",
+    "text": "Why would we want buffers? What purpose do they serve?"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#so-many-ways-to-visualize-information-on-a-map",
-    "href": "Lectures/Cartography_lecture.html#so-many-ways-to-visualize-information-on-a-map",
-    "title": "Cartography 101",
-    "section": "So many ways to visualize information on a map!",
-    "text": "So many ways to visualize information on a map!\n\nThematic Maps – organize and display spatial variation of a single variable\nChoropleth maps – changes in a variable are classified and mapped by some administrative category (e.g. countries or states)\nDasymetric maps – Uses additional information to allocate value within polygons\nIsoline or contour maps – lines delineate areas of similar value. E.g., air pressure or elevation\nReference maps – may display lots of different types of information\n\nTopological maps or atlases\n\nDot maps, picture symbol maps, graduated symbol maps\nNetwork and flow maps – show direction and magnitude of flows\nCartograms—a unit’s display area is determined not by its actual area but by an attribute value"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#calculating-how-many-features-fall-into-an-area",
+    "href": "Lectures/Spatial_analysis_lecture1.html#calculating-how-many-features-fall-into-an-area",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "Calculating how many features fall into an area",
+    "text": "Calculating how many features fall into an area\nPoint in polygon (aka spatial join)"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#choropleth-map",
-    "href": "Lectures/Cartography_lecture.html#choropleth-map",
-    "title": "Cartography 101",
-    "section": "Choropleth map",
-    "text": "Choropleth map\n\nSource: Census Atlas of the U.S."
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#calculating-how-many-features-fall-into-an-area-1",
+    "href": "Lectures/Spatial_analysis_lecture1.html#calculating-how-many-features-fall-into-an-area-1",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "Calculating how many features fall into an area",
+    "text": "Calculating how many features fall into an area\nPoint in polygon (aka spatial join)"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#dasymetric-map",
-    "href": "Lectures/Cartography_lecture.html#dasymetric-map",
-    "title": "Cartography 101",
-    "section": "Dasymetric map",
-    "text": "Dasymetric map\n\nSource: https://www.nature.com/articles/s41597-022-01603-z"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#what-if-we-want-to-know-areas-where-two-or-more-layers-overlap",
+    "href": "Lectures/Spatial_analysis_lecture1.html#what-if-we-want-to-know-areas-where-two-or-more-layers-overlap",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "What if we want to know areas where two (or more) layers overlap?",
+    "text": "What if we want to know areas where two (or more) layers overlap?\nIntersect"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#reference-map",
-    "href": "Lectures/Cartography_lecture.html#reference-map",
-    "title": "Cartography 101",
-    "section": "Reference map",
-    "text": "Reference map\n\nSource: https://www.nationsonline.org/oneworld/map/USA/indiana_map.htm"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#what-if-we-want-to-know-areas-where-two-or-more-layers-overlap-1",
+    "href": "Lectures/Spatial_analysis_lecture1.html#what-if-we-want-to-know-areas-where-two-or-more-layers-overlap-1",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "What if we want to know areas where two (or more) layers overlap?",
+    "text": "What if we want to know areas where two (or more) layers overlap?\nIntersect"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#topological-map",
-    "href": "Lectures/Cartography_lecture.html#topological-map",
-    "title": "Cartography 101",
-    "section": "Topological map",
-    "text": "Topological map\n\nSource: https://content.tfl.gov.uk/standard-tube-map.pdf"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#what-if-we-want-to-know-how-many-people-fall-into-an-area",
+    "href": "Lectures/Spatial_analysis_lecture1.html#what-if-we-want-to-know-how-many-people-fall-into-an-area",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "What if we want to know how many people fall into an area?",
+    "text": "What if we want to know how many people fall into an area?\nBuffers + Intersect (with census area data) for an approximation"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#dot-density-map",
-    "href": "Lectures/Cartography_lecture.html#dot-density-map",
-    "title": "Cartography 101",
-    "section": "Dot density map",
-    "text": "Dot density map\n\nSource: http://demographics.coopercenter.org/DotMap/index.html"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#how-is-this-useful",
+    "href": "Lectures/Spatial_analysis_lecture1.html#how-is-this-useful",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "How is this useful?",
+    "text": "How is this useful?\nWhat if you only want to rent an AirBnb that’s close to water and cultural locations?"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#a-fun-one-chernoff-faces",
-    "href": "Lectures/Cartography_lecture.html#a-fun-one-chernoff-faces",
-    "title": "Cartography 101",
-    "section": "A fun one: Chernoff faces",
-    "text": "A fun one: Chernoff faces\nFor more information, check out this post.\n\nSource: https://mapdesign.icaci.org/2014/12/mapcarte-353365-life-in-los-angeles-by-eugene-turner-1977/"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#how-is-this-useful-1",
+    "href": "Lectures/Spatial_analysis_lecture1.html#how-is-this-useful-1",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "How is this useful?",
+    "text": "How is this useful?\nWhat if you only want to rent an AirBnb that’s close to water and cultural locations?"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#flow-map-a-famous-one",
-    "href": "Lectures/Cartography_lecture.html#flow-map-a-famous-one",
-    "title": "Cartography 101",
-    "section": "Flow map (a famous one!)",
-    "text": "Flow map (a famous one!)\n\nSource: https://en.wikipedia.org/wiki/Charles_Joseph_Minard"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#grouping-features-together-based-on-a-common-attribute",
+    "href": "Lectures/Spatial_analysis_lecture1.html#grouping-features-together-based-on-a-common-attribute",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "Grouping features together, based on a common attribute",
+    "text": "Grouping features together, based on a common attribute\nDissolve"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#cartograms",
-    "href": "Lectures/Cartography_lecture.html#cartograms",
-    "title": "Cartography 101",
-    "section": "Cartograms",
-    "text": "Cartograms\n\nSource: https://websites.umich.edu/~mejn/election/2016/"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#combining-polygons",
+    "href": "Lectures/Spatial_analysis_lecture1.html#combining-polygons",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "Combining polygons",
+    "text": "Combining polygons\nDissolve example"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#cartograms-1",
-    "href": "Lectures/Cartography_lecture.html#cartograms-1",
-    "title": "Cartography 101",
-    "section": "Cartograms",
-    "text": "Cartograms\n\nSource: https://websites.umich.edu/~mejn/election/2016/"
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#combining-polygons-1",
+    "href": "Lectures/Spatial_analysis_lecture1.html#combining-polygons-1",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "Combining polygons",
+    "text": "Combining polygons\nDissolve example 2"
   },
   {
-    "objectID": "Lectures/Cartography_lecture.html#cartograms-2020-presidential-election-comparison",
-    "href": "Lectures/Cartography_lecture.html#cartograms-2020-presidential-election-comparison",
-    "title": "Cartography 101",
-    "section": "Cartograms: 2020 presidential election comparison",
-    "text": "Cartograms: 2020 presidential election comparison\n\nSource: http://www.viewsoftheworld.net/wp-content/uploads/2020/11/USelection2020Cartogram.png"
-  },
-  {
-    "objectID": "Lectures/Cartography_lecture.html#questions-we-can-ask-about-maps-and-spatial-data",
-    "href": "Lectures/Cartography_lecture.html#questions-we-can-ask-about-maps-and-spatial-data",
-    "title": "Cartography 101",
-    "section": "Questions we can ask about maps and spatial data",
-    "text": "Questions we can ask about maps and spatial data\n\nWhat are the high and low values and where are they?\nDoes there appear to be a relationship between location and value?\nDo similar values appear to be located close together, or clustered? Is another spatial pattern discernible?\nAre there characteristics of areas that appear to correspond with particular sets of values? e.g., coastal or inner city.\nWould the pattern change if we change the scale of analysis? For example, what happens to the spatial pattern if we go from counties to states?"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "What to Expect: Summer 2024",
-    "section": "",
-    "text": "This short course introduces students to the fundamentals of GIS: locating, importing, and visualizing spatial data, as well as common spatial analysis methods and approaches. Each day’s activity is organized around short lectures, complemented by hands-on tutorials and independent work that provide structured practice working with data, software, and common spatial methods."
-  },
-  {
-    "objectID": "index.html#schedule-tentative",
-    "href": "index.html#schedule-tentative",
-    "title": "What to Expect: Summer 2024",
-    "section": "Schedule (tentative)",
-    "text": "Schedule (tentative)\n\nMonday\n\n16:30–16:45: Introductions!\n16:45–17:30: Why GIS?\n17:30–18:30: QGIS tour\n\n\n\nTuesday\n\n9:00–9:30: Important GIS ground rules\n9:30–11:00: Tutorial 1\n\n\n\nWednesday\n\n9:00–9:30: Recap and question time\n9:30–10:30: Cartography basics\n10:30–10:45: Break!\n10:45–13:00: Tutorial 2\n13:00–14:30: Lunch\n14:30–15:30: Common GIS methods and tools, Part 1\n15:30–17:00: Tutorial 3\n\n\n\nThursday\n\n9:00–9:30: Recap and question time\n9:30–10:00: Common GIS methods and tools, Part 2\n10:00–11:00: Tutorial 4\n11:00–11:15: Break!\n11:15–12:30: Tutorial 4 continued\n13:00–14:30: Lunch\n14:30–17:00: Project work and discussion\n\n\n\nFriday\n\n9:00–13:00: Project work and discussion\n13:00–14:30: Lunch\n14:30–15:30: Progettino presentations"
-  },
-  {
-    "objectID": "index.html#il-progettino",
-    "href": "index.html#il-progettino",
-    "title": "What to Expect: Summer 2024",
-    "section": "Il Progettino",
-    "text": "Il Progettino\nThe best way to learn new tools and software applications is through independent work—and if you really want to see how spatial data and methods can be useful in your own research, you’ve got to try it! That’s why a core component of GIS@GSSI is the progettino, a mini-project that you work on over the course of the week and present to the group on Friday afternoon."
+    "objectID": "Lectures/Spatial_analysis_lecture1.html#summary",
+    "href": "Lectures/Spatial_analysis_lecture1.html#summary",
+    "title": "Introduction to spatial analysis: Part 1",
+    "section": "Summary",
+    "text": "Summary\n\nSo many more tools—this is just scratching the surface\nMost of these tools generate a new layer\n\nPay attention to naming AND to where you’re saving!\n\nIf you mess up, you can simply run the tool again\nUsing Help and the internet is key\nIt’s common to need to string together tools to get to a final answer\nLayer names can matter:\n\nNo spaces or strange symbols.\nUse _\nNo starting a layer name with a number (e.g., Pop_2011, not 2011_pop)"
   },
   {
     "objectID": "Lectures/Introductory_lecture.html#what-are-the-pathways-of-population-change-across-the-u.s.",
@@ -516,6 +488,209 @@
     "text": "Source: Sonya Gurwitt class project"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "What to Expect: Summer 2024",
+    "section": "",
+    "text": "This short course introduces students to the fundamentals of GIS: locating, importing, and visualizing spatial data, as well as common spatial analysis methods and approaches. Each day’s activity is organized around short lectures, complemented by hands-on tutorials and independent work that provide structured practice working with data, software, and common spatial methods."
+  },
+  {
+    "objectID": "index.html#schedule-tent",
+    "href": "index.html#schedule-tent",
+    "title": "What to Expect: Summer 2024",
+    "section": "Schedule (TENT)",
+    "text": "Schedule (TENT)\n\nMonday\n\n16:30–16:45: Introductions!\n16:45–17:30: Why GIS?\n17:30–18:30: QGIS tour\n\n\n\nTuesday\n\n9:00–9:30: Important GIS basics\n9:30–11:00: Tutorial 1\n\n\n\nWednesday\n\n9:00–9:30: Recap and question time\n9:30–10:30: Cartography basics\n10:30–10:45: Break!\n10:45–13:00: Tutorial 2\n13:00–14:30: Lunch\n14:30–15:30: Introduction to spatial analysis, Part 1\n15:30–17:00: Tutorial 3\n\n\n\nThursday\n\n9:00–9:30: Recap and question time\n9:30–10:00: Introduction to spatial analysis, Part 2\n10:00–11:00: Tutorial 4\n11:00–11:15: Break!\n11:15–13:00: Tutorial catch-up\n13:00–14:30: Lunch\n14:30–17:00: Project work and discussion\n\n\n\nFriday\n\n9:00–13:00: Project work and discussion\n13:00–14:30: Lunch\n14:30–15:30: Progettino presentations"
+  },
+  {
+    "objectID": "index.html#progettino",
+    "href": "index.html#progettino",
+    "title": "What to Expect: Summer 2024",
+    "section": "Progettino",
+    "text": "Progettino\nThe best way to learn new tools and software applications is through independent work—and if you really want to see how spatial data and methods can be useful in your own research, you’ve got to try it! That’s why a core component of GIS@GSSI is the progettino, a mini-project that you work on over the course of the week and present to the group on Friday afternoon."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "These materials support the summer course in spatial data, visualization, and GIS in the Regional Science and Economic Geography program at the Gran Sasso Science Institute (GSSI) in L’Aquila, Italy."
+  },
+  {
+    "objectID": "about.html#about-qgisgssi",
+    "href": "about.html#about-qgisgssi",
+    "title": "About",
+    "section": "",
+    "text": "These materials support the summer course in spatial data, visualization, and GIS in the Regional Science and Economic Geography program at the Gran Sasso Science Institute (GSSI) in L’Aquila, Italy."
+  },
+  {
+    "objectID": "about.html#about-your-course-lead-rachel-franklin",
+    "href": "about.html#about-your-course-lead-rachel-franklin",
+    "title": "About",
+    "section": "About your course lead: Rachel Franklin",
+    "text": "About your course lead: Rachel Franklin\nI’m a quantitative human geographer in the Centre for Urban and Regional Development Studies (CURDS) at Newcastle University. I’m also the group lead for liveability in the Science of Cities and Regions Programme at The Alan Turing Institute, the UK’s national institute for data science and AI.\nI’ve taught spatial analysis GIS to a range of audiences for almost 15 years, including several times at the GSSI, and have taught quantitative and demographic methods for over 20 years.\nYou can find out more about me here and here."
+  },
+  {
+    "objectID": "about.html#about-these-teaching-materials",
+    "href": "about.html#about-these-teaching-materials",
+    "title": "About",
+    "section": "About these teaching materials",
+    "text": "About these teaching materials\nThese materials are aimed at students who are experts in something other than geography and spatial analysis. The primary goal is twofold: to illustrate the potential and utlity of spatial thinking and methods and to provide a user-friendly introduction to applying spatial thinking and methods.\nThe code and license for all these materials can be found on GitHub ."
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#racial-segregation-in-detroit-michigan",
+    "href": "Lectures/Cartography_lecture.html#racial-segregation-in-detroit-michigan",
+    "title": "Cartography 101",
+    "section": "Racial segregation in Detroit, Michigan",
+    "text": "Racial segregation in Detroit, Michigan\n\nSources: http://www.wired.com/2013/08/how-segregated-is-your-city-this-eye-opening-map-shows-you/?viewall=true; http://demographics.coopercenter.org/DotMap/index.html"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#representing-different-kinds-of-information",
+    "href": "Lectures/Cartography_lecture.html#representing-different-kinds-of-information",
+    "title": "Cartography 101",
+    "section": "Representing different kinds of information",
+    "text": "Representing different kinds of information\nThe way in which we display data on the map needs to match not only the type of data but also the type of feature\n\nNominal – labels\nCategorical – different symbol or color for each category\nOrdinal – we want to use color or symbol size to convey the increase in value that goes with each category\n\nGraduated or proportional symbol maps.\n\n\nNumerical – for points and lines, we use lines thickness or symbol size to express variations in value\n\nFor polygons we use graduated color or choropleth maps\nSingle color that changes in intensity to convey changes in value\nSometimes two colors are used"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#classification-schemes",
+    "href": "Lectures/Cartography_lecture.html#classification-schemes",
+    "title": "Cartography 101",
+    "section": "Classification Schemes",
+    "text": "Classification Schemes\nMapping continuous data means we need a meaningful way to create categories – this is called classification\n\nSimilar to choices that are made in generating a histogram\nHow we allocate values to categories will affect our final map\n\nThis means number of categories\nBut also the classification scheme itself\n\nIdeally you are able to justify your choices (good general advice!)\n\nWhat is the takeaway message you want to convey?\nWho is your audience?"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#types-of-classification",
+    "href": "Lectures/Cartography_lecture.html#types-of-classification",
+    "title": "Cartography 101",
+    "section": "Types of classification",
+    "text": "Types of classification\n\nNatural breaks (Jenks) – looks at the distribution of values and sets the break points at “natural breaks” in the data\nEqual interval – Creates a set number of classes of equal size\nFixed interval – Same as equal interval, except you decide the size of the interval and the number of classes depends on that decision (e.g., by 1,000s)\nQuantile (equal count) – puts the same number of features into each class\nStandard deviation – creates categories based on the number of standard deviations away from the mean\nPretty breaks – Breaks categories at round numbers\nManual – you choose the break points yourself"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#qgis-symbology-interface",
+    "href": "Lectures/Cartography_lecture.html#qgis-symbology-interface",
+    "title": "Cartography 101",
+    "section": "QGIS symbology interface",
+    "text": "QGIS symbology interface"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#what-if-we-look-at-the-histogram",
+    "href": "Lectures/Cartography_lecture.html#what-if-we-look-at-the-histogram",
+    "title": "Cartography 101",
+    "section": "What if we look at the histogram?",
+    "text": "What if we look at the histogram?"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#what-do-we-need-to-think-about",
+    "href": "Lectures/Cartography_lecture.html#what-do-we-need-to-think-about",
+    "title": "Cartography 101",
+    "section": "What do we need to think about?",
+    "text": "What do we need to think about?\n\nMap elements – the pieces of a map that make it a finished (and polished product)\n\nIndividual elements should contribute to conveying information, not detract from it\nLimit clumping together of elements\nLimit use of multiple fonts and colors\n\nMap symbology – the way in which the information the map conveys is portrayed\n\nColors – hue, intensity, and saturation\nSymbols – size and type\n\nBy necessity, maps are selective of the information they show and information is generalized"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#choosing-symbols-and-colors",
+    "href": "Lectures/Cartography_lecture.html#choosing-symbols-and-colors",
+    "title": "Cartography 101",
+    "section": "Choosing symbols and colors",
+    "text": "Choosing symbols and colors\n\nBeauty is in the eye of the beholder, but there are some general guidelines!\nWater and land should not be given unusual colors—e.g., water is blue not red\nIncreased thickness of lines or larger symbols should match increased value\nDarker or more intense colors usually go with higher values\nIf you use a color ramp with two colors, your data should also reflect two extremes in value—for example, in and out migration or voting patterns\nAvoid mixing and matching lots of different patterns on the same map—the eye can’t handle it"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#for-those-who-like-colorcolor-brewer",
+    "href": "Lectures/Cartography_lecture.html#for-those-who-like-colorcolor-brewer",
+    "title": "Cartography 101",
+    "section": "For those who like color—Color Brewer!",
+    "text": "For those who like color—Color Brewer!\n\nSource: https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#what-makes-a-map",
+    "href": "Lectures/Cartography_lecture.html#what-makes-a-map",
+    "title": "Cartography 101",
+    "section": "What makes a map?",
+    "text": "What makes a map?\n\n\n\n\nCartographic elements\n\nMap object\nTitle\nNeatline\nScale bar\nLegend\nNorth arrow\nInset map"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#so-many-ways-to-visualize-information-on-a-map",
+    "href": "Lectures/Cartography_lecture.html#so-many-ways-to-visualize-information-on-a-map",
+    "title": "Cartography 101",
+    "section": "So many ways to visualize information on a map!",
+    "text": "So many ways to visualize information on a map!\n\nThematic Maps – organize and display spatial variation of a single variable\nChoropleth maps – changes in a variable are classified and mapped by some administrative category (e.g. countries or states)\nDasymetric maps – Uses additional information to allocate value within polygons\nIsoline or contour maps – lines delineate areas of similar value. E.g., air pressure or elevation\nReference maps – may display lots of different types of information\n\nTopological maps or atlases\n\nDot maps, picture symbol maps, graduated symbol maps\nNetwork and flow maps – show direction and magnitude of flows\nCartograms—a unit’s display area is determined not by its actual area but by an attribute value"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#choropleth-map",
+    "href": "Lectures/Cartography_lecture.html#choropleth-map",
+    "title": "Cartography 101",
+    "section": "Choropleth map",
+    "text": "Choropleth map\n\nSource: Census Atlas of the U.S."
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#dasymetric-map",
+    "href": "Lectures/Cartography_lecture.html#dasymetric-map",
+    "title": "Cartography 101",
+    "section": "Dasymetric map",
+    "text": "Dasymetric map\n\nSource: https://www.nature.com/articles/s41597-022-01603-z"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#reference-map",
+    "href": "Lectures/Cartography_lecture.html#reference-map",
+    "title": "Cartography 101",
+    "section": "Reference map",
+    "text": "Reference map\n\nSource: https://www.nationsonline.org/oneworld/map/USA/indiana_map.htm"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#topological-map",
+    "href": "Lectures/Cartography_lecture.html#topological-map",
+    "title": "Cartography 101",
+    "section": "Topological map",
+    "text": "Topological map\n\nSource: https://content.tfl.gov.uk/standard-tube-map.pdf"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#dot-density-map",
+    "href": "Lectures/Cartography_lecture.html#dot-density-map",
+    "title": "Cartography 101",
+    "section": "Dot density map",
+    "text": "Dot density map\n\nSource: http://demographics.coopercenter.org/DotMap/index.html"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#a-fun-one-chernoff-faces",
+    "href": "Lectures/Cartography_lecture.html#a-fun-one-chernoff-faces",
+    "title": "Cartography 101",
+    "section": "A fun one: Chernoff faces",
+    "text": "A fun one: Chernoff faces\nFor more information, check out this post.\n\nSource: https://mapdesign.icaci.org/2014/12/mapcarte-353365-life-in-los-angeles-by-eugene-turner-1977/"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#flow-map-a-famous-one",
+    "href": "Lectures/Cartography_lecture.html#flow-map-a-famous-one",
+    "title": "Cartography 101",
+    "section": "Flow map (a famous one!)",
+    "text": "Flow map (a famous one!)\n\nSource: https://en.wikipedia.org/wiki/Charles_Joseph_Minard"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#cartograms",
+    "href": "Lectures/Cartography_lecture.html#cartograms",
+    "title": "Cartography 101",
+    "section": "Cartograms",
+    "text": "Cartograms\n\nSource: https://websites.umich.edu/~mejn/election/2016/"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#cartograms-1",
+    "href": "Lectures/Cartography_lecture.html#cartograms-1",
+    "title": "Cartography 101",
+    "section": "Cartograms",
+    "text": "Cartograms\n\nSource: https://websites.umich.edu/~mejn/election/2016/"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#cartograms-2020-presidential-election-comparison",
+    "href": "Lectures/Cartography_lecture.html#cartograms-2020-presidential-election-comparison",
+    "title": "Cartography 101",
+    "section": "Cartograms: 2020 presidential election comparison",
+    "text": "Cartograms: 2020 presidential election comparison\n\nSource: http://www.viewsoftheworld.net/wp-content/uploads/2020/11/USelection2020Cartogram.png"
+  },
+  {
+    "objectID": "Lectures/Cartography_lecture.html#questions-we-can-ask-about-maps-and-spatial-data",
+    "href": "Lectures/Cartography_lecture.html#questions-we-can-ask-about-maps-and-spatial-data",
+    "title": "Cartography 101",
+    "section": "Questions we can ask about maps and spatial data",
+    "text": "Questions we can ask about maps and spatial data\n\nWhat are the high and low values and where are they?\nDoes there appear to be a relationship between location and value?\nDo similar values appear to be located close together, or clustered? Is another spatial pattern discernible?\nAre there characteristics of areas that appear to correspond with particular sets of values? e.g., coastal or inner city.\nWould the pattern change if we change the scale of analysis? For example, what happens to the spatial pattern if we go from counties to states?"
+  },
+  {
     "objectID": "Lectures/GIS_basics_lecture.html#theres-a-variety-of-kinds-of-spatial-data",
     "href": "Lectures/GIS_basics_lecture.html#theres-a-variety-of-kinds-of-spatial-data",
     "title": "(Q)GIS Basics",
@@ -607,15 +782,27 @@
     "text": "Spatial joins\n\nBest thought of as a spatial analysis method: combines layers to create new information, based on location\n\nNumber of schools in a neighborhood, for example\n\nOutput is a new layer or feature class\nWhat type of spatial join we do depends on what types of features we’re working with"
   },
   {
-    "objectID": "Pages/Introduction_page.html",
-    "href": "Pages/Introduction_page.html",
-    "title": "Let’s Go!",
+    "objectID": "Pages/Tutorial2_part2.html",
+    "href": "Pages/Tutorial2_part2.html",
+    "title": "Bonus Mapping Practice",
     "section": "",
-    "text": "This afternoon is a quick session for us to get to know each other, talk about how the week will be structured, and get an introduction to thinking spatially, how a GIS can be helpful, and the basics of QGIS.",
+    "text": "This bonus practical provides some additional practice mapping and also illustrates how table joins work (and are awesome).\n\nStart a new project.\nFrom the “EU_Mapping_Example” data, add the NUTS2 regions.\n\n Save your project!\n\nHave a look at the attribute table by right clicking on the layer and selecting Open Attribute Table. You’ll notice that all we have here are region names and codes, but no additional contextual data.\nHowever, we do have Total Fertility Rate data for 2020 in an aspatial spreadsheet format (yay!). To look at this data in QGIS, we need to load the file into the project.\nOpen your Data Source Manager by clicking on the Data Source Manager icon . Navigate to the NUTS2 Total Fertility csv spreadsheet in the EU Mapping Example folder and click on it. Click Add and Close.\n\n\n\n\n\n\n\nYou should see the table appear in your layer list, but of course nothing will happen on your map (why?).\nRight click on your Fertility table and have a look at the attributes. Everything looks good: we have Name, a code, and a TFR_2020 variable. Close the table.\nNow go to Properties&gt;Information and scroll down.\n We want to check that the variables have been imported in the correct format—most importantly, that TFR_2020 has been imported as a number (double or integer) and not text (text or string). Text variables cannot be mapped in the same way as numerical information. Close the Properties window.\n\n\n\n\n\n\n\nA common way of getting data into a GIS is to find information in a spreadsheet that can then be combined with the layer attribute table. This is referred to as “joining tables” in a GIS and requires a common column—or primary key–of information in both tables that allows them to be merged into one bigger table that combines both contextual data and location information for each observation.\nThis primary key must uniquely identify each observation. Names of areas, such as “Haute-Normandie”, are one option but if Haute-Normandie is referred to as “Haute-Normandie” in one data source and “Haute Normandie” in the other, the GIS won’t know to match them. For this reason, we generally rely on unique identifier codes.\nLet’s join our Fertility data to the NUTS2 layer. To do this, have a look at both attribute tables and identify which variable both tables have in common.\n Note: the variable names do not have to be the same! However, their format (e.g., text) and contents do have to be the same. Here, GEO_codes and NUTS_ID contain the same information.\nRight click on the NUTS2 Layer, go to Properties and then choose Joins . Click on the  the bottom of the interface and a new window will open. Here is where you specify which table to join to the layer attribute table and which codes to use. Click OK and then Apply and OK in the Join window.\n\n\n\n\n\n\n\nTo see if the join worked, open the layer attribute table and scroll to the end. You should see the TFR_2020 variable from the csv table appended at the end. (you can also go directly to Symbology and map the TFR variable)\n Important note: No new data have been created! If you are happy with the join, right click on the layer and choose Export&gt;Save Features As… and save a new layer in your GeoPackage called NUTS2_TFR_2020. The new layer should be automatically added to your project.\n\n\nNow we are ready to classify and symbolise the data and then make a map!",
     "crumbs": [
       "Home",
-      "Monday",
-      "Let's Go!"
+      "Wednesday",
+      "Bonus Mapping Practice"
+    ]
+  },
+  {
+    "objectID": "Pages/GIS_basics.html",
+    "href": "Pages/GIS_basics.html",
+    "title": "Important GIS Basics",
+    "section": "",
+    "text": "This morning is another quick session. We’ll talk a bit more about the quirks of QGIS, as well as some basic GIS functionality, before starting on our first tutorial.",
+    "crumbs": [
+      "Home",
+      "Tuesday",
+      "Important GIS Basics"
     ]
   },
   {
@@ -727,15 +914,15 @@
     ]
   },
   {
-    "objectID": "Pages/QGIS_basics.html",
-    "href": "Pages/QGIS_basics.html",
-    "title": "QGIS Basics",
+    "objectID": "Pages/Intro_spatial_analysis.html",
+    "href": "Pages/Intro_spatial_analysis.html",
+    "title": "Introduction to Spatial Analysis",
     "section": "",
-    "text": "This morning is another quick session. We’ll talk a bit more about the quirks of QGIS, as well as some basic GIS functionality, before starting on our first tutorial.",
+    "text": "With this lecture we transition to an entire new arena of GIS capability: spatial analysis. Exciting!",
     "crumbs": [
       "Home",
-      "Tuesday",
-      "QGIS Basics"
+      "Wednesday",
+      "Introduction to Spatial Analysis"
     ]
   }
 ]
