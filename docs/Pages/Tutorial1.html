@@ -214,6 +214,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Introduction to Spatial Analysis</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pages/Tutorial3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tutorial 3: Introduction to Spatial Analysis</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -310,6 +316,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Tell the difference between a “project” and the actual data layers</li>
 <li>Identify the most common types of spatial data file formats</li>
 <li>Work with File and folder structures and understand why they matter in a GIS</li>
+<li>Create a new variable in the layer attribute table</li>
 <li>Understand basic symbology for different kinds of features</li>
 <li>Create a new layer from a selection of data</li>
 <li>Create a print layout view and navigate to it</li>
@@ -368,14 +375,14 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Now right click on the “Neighbourhoods_Rome” layer and select Open Attribute Table. This opens the data associated with the layer in a new window. You’ll see that this layer has 16 polygons and just one variable: the name of the neighborhood. When you’ve seen enough, close the attribute table.</p></li>
 <li><p>Another way to add layers is from the Data Source Manager, which can be accessed from the menu icon <img src="page_images/Data_source_manager_icon.png" class="img-fluid" style="width:5.0%"> or via the Layer pulldown menu (Layer&gt;Data Source Manager).</p>
 <p>Open the Data Source Manager. To add layers from a GeoPackage, we first need to connect to it. In the Data Source Manager Window, select “GeoPackage” from the list on the left.</p>
-<p>Now, in the central pane of the window, select “New” under “Connections”, navigate to the Rome_Data GeoPackage and select it, then click “Connect”. You should see all the GeoPackage Layers appear in the window below. Add the “AirBnb”, “Population_resident_ISTAT2011”, and “Waterways” layers by selecting and clicking “Add”. Close the Data Source Manager window.</p>
-<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> SAVE your project!</p></li>
+<p>Now, in the central pane of the window, select “New” under “Connections”, navigate to the Rome_Data GeoPackage and select it, then click “Connect”. You should see all the GeoPackage Layers appear in the window below. Add the “AirBnb”, “Population_resident_ISTAT2011”, and “Waterways” layers by selecting and clicking “Add”. Close the Data Source Manager window.</p></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="page_images/Data_source_manager_interface.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
+<p><img src="page_images/Data_source_manager_interface.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> SAVE your project!</p>
 <ol start="10" type="1">
 <li><p>You should have four layers in your project now, but they are all piled on top of each other. Grab a layer and pull it above or below its neighbours. Try this a few times. What happens when you reorder the layers?</p>
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Tip: If you add layers and decide you don’t want them, right click and select “Remove Layer”.</p></li>
@@ -414,11 +421,30 @@ ul.task-list li input[type="checkbox"] {
 <p>Click on the variable name at the top of the table to sort the values.</p></li>
 </ol>
 <ul>
-<li>Which census areas have the largest population? The lowest?</li>
-<li>Selecting the numbers at the side of the attribute table will select census sections on the map. Now look at your map—one enormous strength of a GIS is its ability to perform database operations and then show you <em>on the map</em> where these entities are located. Is there any pattern to census sections with the highest populations? With zero population? When you’re done looking, be sure to clear your selection: <img src="page_images/clear_selection.png" class="img-fluid" style="width:5.0%">.</li>
+<li><p>Which census areas have the largest population? The lowest?</p></li>
+<li><p>Selecting the numbers at the side of the attribute table will select census sections on the map. Now look at your map—one enormous strength of a GIS is its ability to perform database operations and then show you <em>on the map</em> where these entities are located. Is there any pattern to census sections with the highest populations? With zero population? When you’re done looking, be sure to clear your selection: <img src="page_images/clear_selection.png" class="img-fluid" style="width:5.0%">.</p></li>
 </ul>
 <ol start="17" type="1">
-<li>We’ll talk more about map-making, but for now, let’s gain some familiarity with basic symbology. Let’s visualise the variation in Population. To do this, open the Symbology window of the Layer Properties for the Population layer. At the top of the window where it says “Single Symbol” choose “Graduated”.</li>
+<li><p>There’s quite some variety of areas—–some have large populations and some much smaller. However, some districts are also much bigger polygons than others.</p>
+<p>To ease comparison across census polygons, let’s create a new variable for population density. Population density is straightforward to calculate, as a measure of people/square unit of distance (e.g., kilometer, mile, or hectare).</p></li>
+</ol>
+<ul>
+<li><p><strong>Creating a new variable</strong>: Make sure the Population layer is selected in your layers and then click on the Field Calculator icon <img src="page_images/field_calculator_icon.png" class="img-fluid" style="width:5.0%">.</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Good to know: the Field Calculator can also be accessed from the layer attribute table.</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> There are <strong>three</strong> important components to creating a new variable: Field name, field type, and the expression (see below).</p>
+<p>In this case, for field type, choosing integer in this case will only return whole numbers for density. Because we want to include fractional numbers, <strong>choose “Decimal number” for field type</strong>.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="page_images/field_calculator_interface.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<ul>
+<li>Click ok. To check your results, either look at the attribute table (the last column) or go directly to layer Symbology.</li>
+</ul>
+<p><i class="fa-solid fa-circle-exclamation" aria-label="circle-exclamation"></i> <strong>Important</strong>: Adding a new variable makes permanent changes to the layer. After adding a new variable in this way, QGIS will require you to click the edit icon <img src="page_images/edit_icon.png" class="img-fluid" style="width:4.0%"> and save your edits—be sure to check you’re happy before saying yes!</p>
+<ol start="18" type="1">
+<li>We’ll talk more about map-making, but for now, let’s gain some familiarity with basic symbology. Let’s visualize the variation in Population. To do this, open the Symbology window of the Layer Properties for the Population layer. At the top of the window where it says “Single Symbol” choose “Graduated”.</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -438,7 +464,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Now click “Classify” and “Apply” and “OK”. Take a look at the result—can you still see Neighbourhood boundaries? How do you like the combination of colors? Feel free to make changes.</p></li>
 </ul>
 <p><i class="fa-solid fa-circle-exclamation" aria-label="circle-exclamation"></i> Save your project!</p>
-<ol start="18" type="1">
+<ol start="19" type="1">
 <li>In the main QGIS window, turn off Population and turn on your Waterways and AirBnb layers.</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
@@ -446,7 +472,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="page_images/layers_example.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
 </figure>
 </div>
-<ol start="19" type="1">
+<ol start="20" type="1">
 <li><p>Open the AirBnb attribute table. Selecting a subset of features: the AirBnb contains a variety of kinds of places to rent. Let’s isolate those where it’s the entire home/apartment.</p>
 <p>To select a sub-category of AirBnb listings, you have two choices, to manually select, by sorting your attribute table as we did above, or “select features by expression” <img src="page_images/select_features_icon.png" class="img-fluid" style="width:4.0%">. The latter is much more reliable!</p>
 <p>To select features by expression, you first need to know which variable has the information you want, and which values you’re looking for. Let’s <strong>select all AirBnbs in Rome that offer the entire home/apartment</strong>. Open the “select features by expression” window and then click on “Fields and Values”.</p>
@@ -459,7 +485,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="page_images/selection_interface.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
 </figure>
 </div>
-<ol start="20" type="1">
+<ol start="21" type="1">
 <li><p>Creating a new “AirBnb_entire_home” layer: right click on the AirBnb layer and choose Export&gt;Save selected features. For Format, choose GeoPackage. For File name, navigate to the Rome_Data GeoPackage. Then give your new layer a name—AirBnb_entire_home is a good choice. Click OK. Your new AirBnb layer will be added in Layers, and also saved as a <strong>permanent layer</strong> in the GeoPackage, for re-use elsewhere.</p>
 <p>Clear your AirBnb selection and turn that layer off.</p></li>
 <li><p><strong>Creating and exporting a map layout</strong>. To create a map output that can be saved and used outside the GIS, we need to create a new Print Layout. Click the New Print Layout icon <img src="page_images/print_layout_icon.png" class="img-fluid" style="width:4.0%"> or choose Project&gt;New Print Layout from the pulldown menu.</p>
