@@ -32,10 +32,11 @@ website:
           - Pages/Tutorial3.qmd
       - section: "Thursday"
         contents:
-          - Thursday.qmd
+          - Pages/More_spatial_analysis.qmd
+          - Pages/Tutorial4.qmd
       - section: "Friday"
         contents:
-          - Friday.qmd
+          - Pages/Progettino.qmd
       - section: "Data"
         contents:
           - Pages/Data.qmd

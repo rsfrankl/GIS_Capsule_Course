@@ -35,10 +35,10 @@ This short course introduces students to the fundamentals of GIS: locating, impo
 ### Thursday
 
 - 9:00--9:30: Recap and question time
-- 9:30--10:00: Introduction to spatial analysis, Part 2
-- 10:00--11:00: Tutorial 4
+- 9:30--10:30: [More spatial analysis](Pages/More_spatial_analysis.qmd)
+- 10:30--11:00: [Tutorial 4](Pages/Tutorial4.qmd)
 - 11:00--11:15: Break!
-- 11:15--13:00: Tutorial catch-up
+- 11:15--13:00: [Tutorial 4](Pages/Tutorial4.qmd) continued
 - 13:00--14:30: Lunch
 - 14:30--17:00: Project work and discussion
 
@@ -49,4 +49,4 @@ This short course introduces students to the fundamentals of GIS: locating, impo
 - 14:30–15:30: *Progettino* presentations
 
 ## Progettino
-The best way to learn new tools and software applications is through independent work—and if you really want to see how spatial data and methods can be useful in your own research, you've got to try it! That's why a core component of GIS@GSSI is the *progettino*, a mini-project that you work on over the course of the week and present to the group on Friday afternoon.
+The best way to learn new tools and software applications is through independent work—and if you really want to see how spatial data and methods can be useful in your own research, you've got to try it! That's why a core component of GIS@GSSI is the [*progettino*](Pages/Progettino.qmd), a mini-project that you work on over the course of the week and present to the group on Friday afternoon.
