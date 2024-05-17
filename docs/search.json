@@ -1155,7 +1155,7 @@
     "href": "Pages/GIS_commandments.html",
     "title": "The GIS Commandments",
     "section": "",
-    "text": "1. Thou shalt not work from the Downloads folder.\n\n\n2. Thou shalt not move spatial data around using OS Finder or Windows Explorer.\n\n\n3. Know your projection.\n\n\n4. Save your project early and often!\n\n\n5. Do not be afraid to google.",
+    "text": "Thou shalt not work from the Downloads folder.\nUnderstand how file directories are structured, even if you wish you didn’t need to.\nKnow your projection.\nSave projects early and often!\nDo not be afraid to google.\nDon’t be afraid to make mistakes (and you will make mistakes).",
     "crumbs": [
       "Home",
       "Monday",
