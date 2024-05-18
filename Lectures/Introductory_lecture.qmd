@@ -133,7 +133,9 @@ editor: visual
 ## Something special about the vector model: The attribute table
 
 -   Each feature – point, line, or polygon – is dynamically linked to the “**attribute table**” or set of variables
-    -   For example, you could have a dataset of cities, represented as points, and the attribute table might contain characteristics of the city – population, median household income, etc. ![](images_lectures/attribute_table){width="60%" fig-align="center"}
+    -   For example, you could have a dataset of cities, represented as points, and the attribute table might contain characteristics of the city – population, median household income, etc.
+
+![](images_lectures/attribute_table){width="60%" fig-align="center"}
 
 ## Why we like the vector model (and we really do)
 

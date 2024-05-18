@@ -1,5 +1,5 @@
 ---
-title: "Introduction to spatial analysis: Part 1"
+title: "Introduction to spatial analysis (part 1)"
 author: Rachel Franklin
 institute: Newcastle University
 format: 
@@ -28,6 +28,7 @@ Often we use spatial analysis tools to *extract* information
 -   Area within a distance of a road or feature (like a bus stop or metro station)
 
 ## A variety of types of spatial analysis
+
 ### According to Longley
 
 -   **Queries and reasoning** -- no changes are made to the database and no new information is produced
@@ -42,6 +43,7 @@ Often we use spatial analysis tools to *extract* information
     -   Could this spatial pattern have occurred by chance?
 
 ## Types of spatial analysis
+
 ### continued
 
 -   We've covered *queries and reasoning*
@@ -74,20 +76,17 @@ Check out all the options!
 
 ## QGIS toolbox
 
-
 ::: columns
 ::: {.column width="60%"}
-- Located on the main QGIS toolbar
-- Can be overwhelming---take the time to poke around
-- Most tools wook with a common interface/intuition
-  - Practice makes...comfortable (if not perfect)
-- Search is your friend
-  - The key is to know what tools you are searching for!
-  
+-   Located on the main QGIS toolbar
+-   Can be overwhelming---take the time to poke around
+-   Most tools wook with a common interface/intuition
+    -   Practice makes...comfortable (if not perfect)
+-   Search is your friend
+    -   The key is to know what tools you are searching for!
 :::
 
 ::: {.column width="40%"}
-
 ![](images_lectures/QGIS_toolbox.png){width="55%" fig-align="center"}
 :::
 :::
@@ -95,6 +94,7 @@ Check out all the options!
 # The most common tools
 
 ## Buffers
+
 ### Creates a new layer of polygons around a set of input features
 
 \
@@ -112,70 +112,80 @@ Check out all the options!
 ## Why would we want buffers? What purpose do they serve?
 
 ## Calculating how many features fall into an area
+
 ### Point in polygon (aka spatial join)
 
 ![](images_lectures/points_and_buffers.png){width="70%" fig-align="center"}
 
 ## Calculating how many features fall into an area
+
 ### Point in polygon (aka spatial join)
 
 ![](images_lectures/spatial_join.png){width="80%" fig-align="center"}
 
 ## What if we want to know areas where two (or more) layers overlap?
+
 ### Intersect
 
 ![](images_lectures/layers_intersect.png){width="70%" fig-align="center"}
 
 ## What if we want to know areas where two (or more) layers overlap?
+
 ### Intersect
 
 ![](images_lectures/intersection.png){width="70%" fig-align="center"}
 
 ## What if we want to know how many people fall into an area?
+
 ### Buffers + Intersect (with census area data) for an approximation
 
 ![](images_lectures/buffer_plus_intersection.png){width="70%" fig-align="center"}
 
 ## How is this useful?
+
 ### What if you only want to rent an AirBnb that’s close to water and cultural locations? {{< fa face-rolling-eyes >}}
 
 ![](images_lectures/rome_cultural_locations.png){width="70%" fig-align="center"}
 
 ## How is this useful?
+
 ### What if you only want to rent an AirBnb that’s close to water and cultural locations? {{< fa face-rolling-eyes >}}
 
-::: {layout-ncol=2}
+::: {layout-ncol="2"}
 ![](images_lectures/airbnb_water1.png)
 
 ![](images_lectures/airbnb_water2.png)
 :::
 
 ## Grouping features together, based on a common attribute
+
 ### Dissolve
 
 ![](images_lectures/dissolve.png){width="70%" fig-align="center"}
 
 ## Combining polygons
+
 ### Dissolve example
 
 ![](images_lectures/dissolve_example.png){width="70%" fig-align="center"}
 
 ## Combining polygons
+
 ### Dissolve example 2
 
 ![](images_lectures/intersection.png){width="70%" fig-align="center"}
 
 ## Summary
 
-- So many more tools—this is just scratching the surface
-- Most of these tools generate a new layer
-  - Pay attention to **naming** AND to **where you’re saving**!
-- If you mess up, you can simply run the tool again
-- Using Help and the internet is key
-- It’s common to need to string together tools to get to a final answer
-- Layer names can matter:
-  - No spaces or strange symbols. 
-  - Use _
-  - No starting a layer name with a number (e.g., Pop_2011, not 2011_pop)
+-   So many more tools—this is just scratching the surface
+-   Most of these tools generate a new layer
+    -   Pay attention to **naming** AND to **where you’re saving**!
+-   If you mess up, you can simply run the tool again
+-   Using Help and the internet is key
+-   It’s common to need to string together tools to get to a final answer
+-   Layer names can matter:
+    -   No spaces or strange symbols.
+    -   Use \_
+    -   No starting a layer name with a number (e.g., Pop_2011, not 2011_pop)
 
 # Next up: Tutorial 3!

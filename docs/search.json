@@ -970,147 +970,147 @@
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#spatial-analysis-for-urban-and-regional-analysis",
     "href": "Lectures/Spatial_analysis_lecture1.html#spatial-analysis-for-urban-and-regional-analysis",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "Spatial analysis for urban and regional analysis",
     "text": "Spatial analysis for urban and regional analysis\nOften we use spatial analysis tools to extract information\n\nLength of paved road in a region\nNumber of universities in a place\nNumber of inhabitants within a distance of a service\nArea within a distance of a road or feature (like a bus stop or metro station)"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#a-variety-of-types-of-spatial-analysis",
     "href": "Lectures/Spatial_analysis_lecture1.html#a-variety-of-types-of-spatial-analysis",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "A variety of types of spatial analysis",
     "text": "A variety of types of spatial analysis\nAccording to Longley\n\nQueries and reasoning – no changes are made to the database and no new information is produced\n\ne.g., how many cities within 300km of L’Aquila?\n\nMeasurements – Describing aspects of geographic data, like length, area, or shape\n\nFor example, calculating the size (or area) of a parcel\n\nTransformations – Changing or combining data to create new data Using logical, mathematical, or geometrical rules\nDescriptive summaries – summary statistics for spatial data\nOptimization – Finding the best locations for a set of objects\n\nFor example, best locations for public services\n\nHypothesis testing – Making generalizations about a population from a sample\n\nCould this spatial pattern have occurred by chance?"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#types-of-spatial-analysis",
     "href": "Lectures/Spatial_analysis_lecture1.html#types-of-spatial-analysis",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "Types of spatial analysis",
     "text": "Types of spatial analysis\ncontinued\n\nWe’ve covered queries and reasoning\nMeasurement is either embedded in feature class information (e.g., length of a line segment) or is straightforwardly calculated in a GIS—this is GIS bread and butter functionality!\nThis lecture focuses on transformations"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#transformations",
     "href": "Lectures/Spatial_analysis_lecture1.html#transformations",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "Transformations",
     "text": "Transformations\n\nBuffers – Create an area of a specific and constant width around a point, line, or polygon This can be used to identify all objects falling within a certain distance of the original feature\nPoint in polygon – Associates points with polygons\n\nCounts the number of points within a polygon or…Attaches polygon characteristics to points\nThis is usually what people mean when they refer to a spatial join\n\nPolygon overlay – Determining whether two polygons overlap, the extent of their overlap, and what new polygons are created by the overlap\n\nCan be thought of as an intersection or a union of units and information\n\nSpatial interpolation – Estimating the value of a variable for locations where no measurement has occurred. For example, rainfall, temperature, or elevation\n\ne.g., Inverse distance weighting or Kriging\n\nDensity estimation and potential – generates a surface from a set of discrete points"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#qgis-pulldown-menus",
     "href": "Lectures/Spatial_analysis_lecture1.html#qgis-pulldown-menus",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "QGIS pulldown menus",
     "text": "QGIS pulldown menus\n\n\nCheck out all the options!"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#qgis-toolbox",
     "href": "Lectures/Spatial_analysis_lecture1.html#qgis-toolbox",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "QGIS toolbox",
     "text": "QGIS toolbox\n\n\n\nLocated on the main QGIS toolbar\nCan be overwhelming—take the time to poke around\nMost tools wook with a common interface/intuition\n\nPractice makes…comfortable (if not perfect)\n\nSearch is your friend\n\nThe key is to know what tools you are searching for!"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#buffers",
     "href": "Lectures/Spatial_analysis_lecture1.html#buffers",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "Buffers",
     "text": "Buffers\nCreates a new layer of polygons around a set of input features"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#appealing-way-to-visualise-and-calculate-areas-surrounding-features",
     "href": "Lectures/Spatial_analysis_lecture1.html#appealing-way-to-visualise-and-calculate-areas-surrounding-features",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "Appealing way to visualise and calculate areas surrounding features",
     "text": "Appealing way to visualise and calculate areas surrounding features"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#appealing-way-to-visualise-and-calculate-areas-surrounding-features-1",
     "href": "Lectures/Spatial_analysis_lecture1.html#appealing-way-to-visualise-and-calculate-areas-surrounding-features-1",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "Appealing way to visualise and calculate areas surrounding features",
     "text": "Appealing way to visualise and calculate areas surrounding features"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#why-would-we-want-buffers-what-purpose-do-they-serve",
     "href": "Lectures/Spatial_analysis_lecture1.html#why-would-we-want-buffers-what-purpose-do-they-serve",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "Why would we want buffers? What purpose do they serve?",
     "text": "Why would we want buffers? What purpose do they serve?"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#calculating-how-many-features-fall-into-an-area",
     "href": "Lectures/Spatial_analysis_lecture1.html#calculating-how-many-features-fall-into-an-area",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "Calculating how many features fall into an area",
     "text": "Calculating how many features fall into an area\nPoint in polygon (aka spatial join)"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#calculating-how-many-features-fall-into-an-area-1",
     "href": "Lectures/Spatial_analysis_lecture1.html#calculating-how-many-features-fall-into-an-area-1",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "Calculating how many features fall into an area",
     "text": "Calculating how many features fall into an area\nPoint in polygon (aka spatial join)"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#what-if-we-want-to-know-areas-where-two-or-more-layers-overlap",
     "href": "Lectures/Spatial_analysis_lecture1.html#what-if-we-want-to-know-areas-where-two-or-more-layers-overlap",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "What if we want to know areas where two (or more) layers overlap?",
     "text": "What if we want to know areas where two (or more) layers overlap?\nIntersect"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#what-if-we-want-to-know-areas-where-two-or-more-layers-overlap-1",
     "href": "Lectures/Spatial_analysis_lecture1.html#what-if-we-want-to-know-areas-where-two-or-more-layers-overlap-1",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "What if we want to know areas where two (or more) layers overlap?",
     "text": "What if we want to know areas where two (or more) layers overlap?\nIntersect"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#what-if-we-want-to-know-how-many-people-fall-into-an-area",
     "href": "Lectures/Spatial_analysis_lecture1.html#what-if-we-want-to-know-how-many-people-fall-into-an-area",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "What if we want to know how many people fall into an area?",
     "text": "What if we want to know how many people fall into an area?\nBuffers + Intersect (with census area data) for an approximation"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#how-is-this-useful",
     "href": "Lectures/Spatial_analysis_lecture1.html#how-is-this-useful",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "How is this useful?",
     "text": "How is this useful?\nWhat if you only want to rent an AirBnb that’s close to water and cultural locations?"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#how-is-this-useful-1",
     "href": "Lectures/Spatial_analysis_lecture1.html#how-is-this-useful-1",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "How is this useful?",
     "text": "How is this useful?\nWhat if you only want to rent an AirBnb that’s close to water and cultural locations?"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#grouping-features-together-based-on-a-common-attribute",
     "href": "Lectures/Spatial_analysis_lecture1.html#grouping-features-together-based-on-a-common-attribute",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "Grouping features together, based on a common attribute",
     "text": "Grouping features together, based on a common attribute\nDissolve"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#combining-polygons",
     "href": "Lectures/Spatial_analysis_lecture1.html#combining-polygons",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "Combining polygons",
     "text": "Combining polygons\nDissolve example"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#combining-polygons-1",
     "href": "Lectures/Spatial_analysis_lecture1.html#combining-polygons-1",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "Combining polygons",
     "text": "Combining polygons\nDissolve example 2"
   },
   {
     "objectID": "Lectures/Spatial_analysis_lecture1.html#summary",
     "href": "Lectures/Spatial_analysis_lecture1.html#summary",
-    "title": "Introduction to spatial analysis: Part 1",
+    "title": "Introduction to spatial analysis (part 1)",
     "section": "Summary",
     "text": "Summary\n\nSo many more tools—this is just scratching the surface\nMost of these tools generate a new layer\n\nPay attention to naming AND to where you’re saving!\n\nIf you mess up, you can simply run the tool again\nUsing Help and the internet is key\nIt’s common to need to string together tools to get to a final answer\nLayer names can matter:\n\nNo spaces or strange symbols.\nUse _\nNo starting a layer name with a number (e.g., Pop_2011, not 2011_pop)"
   },
