@@ -692,7 +692,7 @@
     "href": "Lectures/Introductory_lecture.html#organizing-spatial-data-in-a-gis-1",
     "title": "Introductions + Why GIS?",
     "section": "Organizing spatial data in a GIS",
-    "text": "Organizing spatial data in a GIS\n\nA GIS doesn’t save information as maps\n\nRather, we tell the GIS how to locate objects in relation to other objects and in space\n\nThings to be aware of:\n\nYour spatial data model\nThe relationships your objects have with each other in the real world\ne.g., street intersections or shared regional borders\nReferred to as, “topology”"
+    "text": "Organizing spatial data in a GIS\n\nA GIS doesn’t save information as maps\n\nRather, the GIS stores information on object location and relation to other objects and in space\n\nThings to be aware of:\n\nYour spatial data model\nThe relationships your objects have with each other in the real world\n\ne.g., street intersections or shared regional borders\nReferred to as “topology”"
   },
   {
     "objectID": "Lectures/Introductory_lecture.html#spatial-data-models",

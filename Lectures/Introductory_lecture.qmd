@@ -100,13 +100,13 @@ editor: visual
 
 ## Organizing spatial data in a GIS
 
--   A GIS doesn’t save information as maps
-    -   Rather, we tell the GIS how to locate objects in relation to other objects and in space
--   Things to be aware of:
-    -   Your spatial data model
-    -   The relationships your objects have with each other in the real world
-    -   e.g., street intersections or shared regional borders
-    -   Referred to as, “topology”
+- A GIS doesn’t save information as maps
+  - Rather, the GIS stores information on object location and relation to other objects and in space
+- Things to be aware of:
+  - Your spatial data model
+  - The relationships your objects have with each other in the real world
+    - e.g., street intersections or shared regional borders
+    - Referred to as “topology”
 
 ## Spatial data models
 
