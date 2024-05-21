@@ -5,16 +5,16 @@ css: /Styles/website_styles.scss
 
 The point of our first tutorial is to familiarize ourselves with basic navigation of QGIS. By the end of this practical, you should know how to:
 
-- Locate and add data to an empty QGIS project from downloaded data
-- Tell the difference between a “project” and the actual data layers
-- Identify the most common types of spatial data file formats
-- Work with File and folder structures and understand why they matter in a GIS
-- Create a new variable in the layer attribute table
-- Understand basic symbology for different kinds of features
-- Create a new layer from a selection of data
-- Create a print layout view and navigate to it
-- Export a map
-- Complete basic manipulation of data layers
+-   Locate and add data to an empty QGIS project from downloaded data
+-   Tell the difference between a “project” and the actual data layers
+-   Identify the most common types of spatial data file formats
+-   Work with File and folder structures and understand why they matter in a GIS
+-   Create a new variable in the layer attribute table
+-   Understand basic symbology for different kinds of features
+-   Create a new layer from a selection of data
+-   Create a print layout view and navigate to it
+-   Export a map
+-   Complete basic manipulation of data layers
 
 ## First Things First---Some Preliminaries
 
@@ -55,7 +55,7 @@ The point of our first tutorial is to familiarize ourselves with basic navigatio
 
     {{< fa lightbulb >}} Another tip: Layer Properties can also be accessed by right-clicking on the layer and choosing Properties. When in doubt, try right-clicking!
 
-8.  Now right click on the “Neighbourhoods_Rome” layer and select Open Attribute Table. This opens the data associated with the layer in a new window. You’ll see that this layer has 16 polygons and just one variable: the name of the neighborhood. When you’ve seen enough, close the attribute table.
+8.  Now right click on the “Neighbourhoods_Rome” layer and select Open Attribute Table. This opens the data associated with the layer in a new window. You’ll see that this layer has 15 polygons and just one variable: the name of the neighborhood. When you’ve seen enough, close the attribute table.
 
 9.  Another way to add layers is from the Data Source Manager, which can be accessed from the menu icon ![](page_images/Data_source_manager_icon.png){width="5%"} or via the Layer pulldown menu (Layer\>Data Source Manager).
 
@@ -101,21 +101,21 @@ The point of our first tutorial is to familiarize ourselves with basic navigatio
 
 -   Selecting the numbers at the side of the attribute table will select census sections on the map. Now look at your map---one enormous strength of a GIS is its ability to perform database operations and then show you *on the map* where these entities are located. Is there any pattern to census sections with the highest populations? With zero population? When you’re done looking, be sure to clear your selection: ![](page_images/clear_selection.png){width="5%"}.
 
-17. There’s quite some variety of areas—--some have large populations and some much smaller. However, some districts are also much bigger polygons than others. 
+17. There’s quite some variety of areas—--some have large populations and some much smaller. However, some districts are also much bigger polygons than others.
 
     To ease comparison across census polygons, let’s create a new variable for population density. Population density is straightforward to calculate, as a measure of people/square unit of distance (e.g., kilometer, mile, or hectare).
 
-- **Creating a new variable**: Make sure the Population layer is selected in your layers and then click on the Field Calculator icon ![](page_images/field_calculator_icon.png){width="5%"}. 
+-   **Creating a new variable**: Make sure the Population layer is selected in your layers and then click on the Field Calculator icon ![](page_images/field_calculator_icon.png){width="5%"}.
 
     {{< fa lightbulb >}} Good to know: the Field Calculator can also be accessed from the layer attribute table.
 
-    {{< fa lightbulb >}} There are **three** important components to creating a new variable: Field name, field type, and the expression (see below). 
-    
+    {{< fa lightbulb >}} There are **three** important components to creating a new variable: Field name, field type, and the expression (see below).
+
     In this case, for field type, choosing integer in this case will only return whole numbers for density. Because we want to include fractional numbers, **choose “Decimal number” for field type**.
 
 ![](page_images/field_calculator_interface.png){width="90%" fig-align="center"}
 
-- Click ok. To check your results, either look at the attribute table (the last column) or go directly to layer Symbology.
+-   Click ok. To check your results, either look at the attribute table (the last column) or go directly to layer Symbology.
 
 {{< fa circle-exclamation >}} **Important**: Adding a new variable makes permanent changes to the layer. After adding a new variable in this way, QGIS will require you to click the edit icon ![](page_images/edit_icon.png){width="4%"} and save your edits—be sure to check you're happy before saying yes!
 

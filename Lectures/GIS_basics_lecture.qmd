@@ -68,7 +68,7 @@ editor: visual
 
 -   QGIS pulldown menus and toolbars
     -   Especially navigation ![](images_lectures/QGIS_navigation){width="60%"}
--   Panel and tolbar visibility is controlled via View\>
+-   Panel and toolbar visibility is controlled via View\>
 -   Save often!
 
 ## Querying a database
