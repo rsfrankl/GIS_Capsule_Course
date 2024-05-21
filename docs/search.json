@@ -288,6 +288,18 @@
     ]
   },
   {
+    "objectID": "Pages/Getting_started_QGIS.html#basemaps",
+    "href": "Pages/Getting_started_QGIS.html#basemaps",
+    "title": "Getting started with QGIS",
+    "section": "Basemaps",
+    "text": "Basemaps\nBasemaps provide a background for our layers in QGIS and are useful for providing spatial context and, when used sparingly, improving map compositions.\n\n\n\n\n\nFor example, the above image shows the distribution of Airbnb rentals in Rome for March 2023. However, without any additional spatial context, it’s hard to say much about the distribution of points.\n\nAdding a QGIS basemap plug-in\nQGIS offers a variety of plug-ins that expand core QGIS capacity. The QuickMapServices plug-in offers connection to a range of basemaps.\n\nTo install QuickMapService, use the Plugins pulldown menu on the main QGIS window and search plug-ins for “QuickMapSerices”.\nInstall. Basemaps are then accessed via the Web pulldown menu and QuickMapServices\n\n There are additional basemaps available: click on QuickMapServices Settings&gt;More services&gt;Get contributed pack.\n\nTo add a basemap, simply choose one from the list. OSM, CartoDB, and Google are good choices.",
+    "crumbs": [
+      "About",
+      "Monday",
+      "Getting started with QGIS"
+    ]
+  },
+  {
     "objectID": "Pages/Getting_started_QGIS.html#qgis-projects-versus-data",
     "href": "Pages/Getting_started_QGIS.html#qgis-projects-versus-data",
     "title": "Getting started with QGIS",

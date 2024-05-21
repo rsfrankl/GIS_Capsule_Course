@@ -77,6 +77,26 @@ When you open QGIS, you'll notice that there's nothing there to work with! You'l
 
 {{< fa bell >}} **Your turn**: Adjust the symbology and ordering of the three layers.
 
+## Basemaps
+
+Basemaps provide a background for our layers in QGIS and are useful for providing spatial context and, when used sparingly, improving map compositions.
+
+![](page_images/airbnb_basemap1.png){width=90% fig-align="center"}
+
+For example, the above image shows the distribution of Airbnb rentals in Rome for March 2023. However, without any additional spatial context, it's hard to say much about the distribution of points.
+
+### Adding a QGIS basemap plug-in
+
+QGIS offers a variety of plug-ins that expand core QGIS capacity. The QuickMapServices plug-in offers connection to a range of basemaps.
+
+- To install QuickMapService, use the Plugins pulldown menu on the main QGIS window and search plug-ins for "QuickMapSerices".
+- Install.
+Basemaps are then accessed via the Web pulldown menu and QuickMapServices
+  - {{< fa lightbulb >}} There are additional basemaps available: click on QuickMapServices Settings>More services>Get contributed pack.
+- To add a basemap, simply choose one from the list. OSM, CartoDB, and Google are good choices.
+
+![](page_images/airbnb_basemap2.png){width=90% fig-align="center"}
+
 ## QGIS: projects versus data
 
 Like other analytical software applications, QGIS does *not* store data in the project. What does this mean? When you save your project, you save a set of instructions for which data to include and how to display them (e.g., selections and symbolization). You **don't** save the layers themselves. They remain in their original location.

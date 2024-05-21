@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>GIS@GSSI - Getting started with QGIS</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../Styles/website_styles.scss">
+<meta property="og:title" content="GIS@GSSI - Getting started with QGIS">
+<meta property="og:description" content="">
+<meta property="og:site_name" content="GIS@GSSI">
+<meta name="twitter:title" content="GIS@GSSI - Getting started with QGIS">
+<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">GIS@GSSI</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/rsfrankl/GIS_capsule_course"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://x.com/rsfrankl"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/rachelsfranklin/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:rachel.franklin@newcastle.ac.uk"> <i class="bi bi-envelope-fill" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Pages/Introduction_page.html">Monday</a></li><li class="breadcrumb-item"><a href="../Pages/Getting_started_QGIS.html">Getting started with QGIS</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Monday</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pages/Introduction_page.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Let’s Go!</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pages/Getting_started_QGIS.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Getting started with QGIS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pages/GIS_commandments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The GIS Commandments</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Tuesday</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pages/GIS_basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Important GIS Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pages/Tutorial1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tutorial 1: Working with QGIS</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Wednesday</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pages/Cartography_101.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cartography 101</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pages/Tutorial2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tutorial 2: Cartography Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pages/Tutorial2_part2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bonus Mapping Practice</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pages/Intro_spatial_analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Spatial Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pages/Tutorial3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tutorial 3: Introduction to Spatial Analysis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Thursday</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pages/More_spatial_analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">More Spatial Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pages/Tutorial4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tutorial 4: Introduction to Spatial Analysis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">Friday</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pages/Progettino.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Progettino</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text">Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pages/Data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Pages/Finding_spatial_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Finding Spatial Data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#first-things-first-why-an-old-school-gis-application" id="toc-first-things-first-why-an-old-school-gis-application" class="nav-link active" data-scroll-target="#first-things-first-why-an-old-school-gis-application">First things first: Why an old-school GIS application?</a></li>
+  <li><a href="#downloading-qgis" id="toc-downloading-qgis" class="nav-link" data-scroll-target="#downloading-qgis">Downloading QGIS</a></li>
+  <li><a href="#locating-tutorial-data" id="toc-locating-tutorial-data" class="nav-link" data-scroll-target="#locating-tutorial-data">Locating tutorial data</a>
+  <ul class="collapse">
+  <li><a href="#what-about-other-data" id="toc-what-about-other-data" class="nav-link" data-scroll-target="#what-about-other-data">What about other data?</a></li>
+  </ul></li>
+  <li><a href="#data-hygiene" id="toc-data-hygiene" class="nav-link" data-scroll-target="#data-hygiene">Data hygiene</a></li>
+  <li><a href="#opening-qgis-and-getting-started" id="toc-opening-qgis-and-getting-started" class="nav-link" data-scroll-target="#opening-qgis-and-getting-started">Opening QGIS and getting started</a>
+  <ul class="collapse">
+  <li><a href="#adding-data" id="toc-adding-data" class="nav-link" data-scroll-target="#adding-data">Adding data</a></li>
+  <li><a href="#layer-visibility" id="toc-layer-visibility" class="nav-link" data-scroll-target="#layer-visibility">Layer visibility</a></li>
+  <li><a href="#layer-symbology" id="toc-layer-symbology" class="nav-link" data-scroll-target="#layer-symbology">Layer symbology</a></li>
+  </ul></li>
+  <li><a href="#basemaps" id="toc-basemaps" class="nav-link" data-scroll-target="#basemaps">Basemaps</a>
+  <ul class="collapse">
+  <li><a href="#adding-a-qgis-basemap-plug-in" id="toc-adding-a-qgis-basemap-plug-in" class="nav-link" data-scroll-target="#adding-a-qgis-basemap-plug-in">Adding a QGIS basemap plug-in</a></li>
+  </ul></li>
+  <li><a href="#qgis-projects-versus-data" id="toc-qgis-projects-versus-data" class="nav-link" data-scroll-target="#qgis-projects-versus-data">QGIS: projects versus data</a></li>
+  <li><a href="#getting-help-and-learning-more" id="toc-getting-help-and-learning-more" class="nav-link" data-scroll-target="#getting-help-and-learning-more">Getting help and learning more</a>
+  <ul class="collapse">
+  <li><a href="#qgis-documentation" id="toc-qgis-documentation" class="nav-link" data-scroll-target="#qgis-documentation">QGIS Documentation</a></li>
+  <li><a href="#learning-to-love-google" id="toc-learning-to-love-google" class="nav-link" data-scroll-target="#learning-to-love-google">Learning to love Google</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Pages/Introduction_page.html">Monday</a></li><li class="breadcrumb-item"><a href="../Pages/Getting_started_QGIS.html">Getting started with QGIS</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Getting started with QGIS</h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="first-things-first-why-an-old-school-gis-application" class="level2">
+<h2 class="anchored" data-anchor-id="first-things-first-why-an-old-school-gis-application">First things first: Why an old-school GIS application?</h2>
+<p>It’s the 21st century—why are we using a desktop GUI-based software program? A few reasons:</p>
+<ul>
+<li>A GIS like <a href="https://www.qgis.org/en/site/">QGIS</a> or ESRI’s <a href="https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview">ArcGIS Pro</a> provides a soft introduction to spatial thinking, managing spatial data files, and visualizing/analyzing information. It’s a lot to take in in just a few days.</li>
+<li>The GUI (graphical user interface) component of a traditional GIS allows you to explore the wide range of cartographic and analytical options available.</li>
+<li>A GIS is great for visualizing multiple layers of information at once…and catching potential problems early…</li>
+<li>Once you are comfortable with one GIS package, those skills will translate easily to other environments. You’re not just learning a software; you’re learning a way of thinking.</li>
+<li>GIS has amazing functionality, all in one place.</li>
+</ul>
+</section>
+<section id="downloading-qgis" class="level2">
+<h2 class="anchored" data-anchor-id="downloading-qgis">Downloading QGIS</h2>
+<p>This week, all of our hands-on practicals will use QGIS. I prefer QGIS because it’s <em>free</em> and runs on both Windows and Macs.</p>
+<ul>
+<li><p>From the <a href="https://www.qgis.org/en/site/">QGIS site</a>, choose your operating system and download the <strong>LTR version</strong> of QGIS—3.34.6 Prizren as of May 2024. <strong>Note</strong> that this is <em>not</em> the most recent version of QGIS; we want the more stable LTR.</p>
+<ul>
+<li>For Mac users, you may need to right click on the app from your Applications folder to force QGIS to open the first time.</li>
+</ul></li>
+</ul>
+</section>
+<section id="locating-tutorial-data" class="level2">
+<h2 class="anchored" data-anchor-id="locating-tutorial-data">Locating tutorial data</h2>
+<p>All tutorial data for this week are available <a href="../Pages/Data.html">here</a>.</p>
+<section id="what-about-other-data" class="level3">
+<h3 class="anchored" data-anchor-id="what-about-other-data">What about other data?</h3>
+<p>For your progettino or other research, you’ll locate data online and then download. Be sure to keep organized!</p>
+<p>That means:</p>
+<ul>
+<li><p>Move data from your Download folder and store somewhere obvious.</p></li>
+<li><p>Keep track of where you found data (e.g., webpage links) and any relevant metadata.</p></li>
+<li><p>When cleaning data and getting ready to work with it, keep a master copy!</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> This holds for tutorial data too, although you can always download a new copy if something goes wrong!</p></li>
+</ul>
+</section>
+</section>
+<section id="data-hygiene" class="level2">
+<h2 class="anchored" data-anchor-id="data-hygiene">Data hygiene</h2>
+<p>My recommendations for good data hygiene this week:</p>
+<ul>
+<li>Create a folder in either Desktop or Documents called GIS_course (or similar). This is where you will save EVERYTHING to do with this week’s work.</li>
+<li>Download the tutorial data files. These are zipped. Expand them and save to your new GIS_Course folder.</li>
+<li>Keep data and QGIS projects together in the same folder.</li>
+</ul>
+</section>
+<section id="opening-qgis-and-getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="opening-qgis-and-getting-started">Opening QGIS and getting started</h2>
+<p>When you open QGIS, you’ll notice that there’s nothing there to work with! You’ll need to add data in order to visualize information, make maps, or perform analysis.</p>
+<section id="adding-data" class="level3">
+<h3 class="anchored" data-anchor-id="adding-data">Adding data</h3>
+<ol type="1">
+<li>Open QGIS.</li>
+<li>The upper left panel provides a browser directory window. Navigate to your GIS_course folder (see image below).</li>
+<li><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Right click on the directory link and add to Favorites. This will make it easier to find your data and projects this week!</li>
+<li>Expand the Rome_Data folder. You should see a cylinder icon and Rome_Data.gpkg. The “gpkg” file suffix indicates a geopackage, a collection of data readable to the GIS. The Rome_Data geopackage contains six layers.</li>
+<li>Let’s see what these data look like! The easiest way to add data in QGIS is to drag and drop—pull the layer down to the Layers panel and watch it appear.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="page_images/QGIS_overview.png" class="img-fluid figure-img"></p>
+<figcaption>QGIS interface overview</figcaption>
+</figure>
+</div>
+</section>
+<section id="layer-visibility" class="level3">
+<h3 class="anchored" data-anchor-id="layer-visibility">Layer visibility</h3>
+<ol type="1">
+<li>Add the Airbnb and Cultural Locations layers from the Rome_Data geopackage and note how layers stack up in the Layers window.</li>
+<li>Note how QGIS draws from the bottom layer up (see below). To re-order layers, drag and drop them above and below each other—see how visibility changes?</li>
+<li>Layers can be turned off by unchecking the box next to the layer name. The layer will remain in the project but won’t be visible.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="page_images/QGIS_layers.png" class="img-fluid figure-img"></p>
+<figcaption>QGIS layers</figcaption>
+</figure>
+</div>
+</section>
+<section id="layer-symbology" class="level3">
+<h3 class="anchored" data-anchor-id="layer-symbology">Layer symbology</h3>
+<ol type="1">
+<li>Layer appearances can be changed. This includes fill colors, line thicknesses, and symbol choices, depending on feature type.</li>
+<li>To change feature symbology, double click on a layer&gt;Symbology <em>or</em> right click&gt;Properties&gt;Symbology.</li>
+<li>Clicking on <simple fill=""> (for polygons) will open a range of options for color and outline (“stroke”) width and color.</simple></li>
+</ol>
+<p><i class="fa-solid fa-bell" aria-label="bell"></i> <strong>Your turn</strong>: Adjust the symbology and ordering of the three layers.</p>
+</section>
+</section>
+<section id="basemaps" class="level2">
+<h2 class="anchored" data-anchor-id="basemaps">Basemaps</h2>
+<p>Basemaps provide a background for our layers in QGIS and are useful for providing spatial context and, when used sparingly, improving map compositions.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="page_images/airbnb_basemap1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<p>For example, the above image shows the distribution of Airbnb rentals in Rome for March 2023. However, without any additional spatial context, it’s hard to say much about the distribution of points.</p>
+<section id="adding-a-qgis-basemap-plug-in" class="level3">
+<h3 class="anchored" data-anchor-id="adding-a-qgis-basemap-plug-in">Adding a QGIS basemap plug-in</h3>
+<p>QGIS offers a variety of plug-ins that expand core QGIS capacity. The QuickMapServices plug-in offers connection to a range of basemaps.</p>
+<ul>
+<li>To install QuickMapService, use the Plugins pulldown menu on the main QGIS window and search plug-ins for “QuickMapSerices”.</li>
+<li>Install. Basemaps are then accessed via the Web pulldown menu and QuickMapServices
+<ul>
+<li><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> There are additional basemaps available: click on QuickMapServices Settings&gt;More services&gt;Get contributed pack.</li>
+</ul></li>
+<li>To add a basemap, simply choose one from the list. OSM, CartoDB, and Google are good choices.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="page_images/airbnb_basemap2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="qgis-projects-versus-data" class="level2">
+<h2 class="anchored" data-anchor-id="qgis-projects-versus-data">QGIS: projects versus data</h2>
+<p>Like other analytical software applications, QGIS does <em>not</em> store data in the project. What does this mean? When you save your project, you save a set of instructions for which data to include and how to display them (e.g., selections and symbolization). You <strong>don’t</strong> save the layers themselves. They remain in their original location.</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> In short: you want to move data and project together.</p>
+<p>This also means that you can work with the same layers in multiple projects and also that QGIS is very careful about <strong>editing data</strong>.</p>
+</section>
+<section id="getting-help-and-learning-more" class="level2">
+<h2 class="anchored" data-anchor-id="getting-help-and-learning-more">Getting help and learning more</h2>
+<p>The goal of this week’s course is to be comfortable with GIS basics and know how to ask for help—this means, which terms to use, how to troubleshoot basic problems, etc.</p>
+<section id="qgis-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="qgis-documentation">QGIS Documentation</h3>
+<p>QGIS provides excellent <a href="https://docs.qgis.org/3.34/en/docs/training_manual/index.html">documentation and tutorials</a>.</p>
+</section>
+<section id="learning-to-love-google" class="level3">
+<h3 class="anchored" data-anchor-id="learning-to-love-google">Learning to love Google</h3>
+<p>If you have a question, chances are someone’s already asked it on the internet and someone else has answered it. Don’t be afraid to google around for answers.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Rachel Franklin, copyright 2024</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with brute force <i class="fa-solid fa-dumbbell" aria-label="dumbbell"></i> and <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
