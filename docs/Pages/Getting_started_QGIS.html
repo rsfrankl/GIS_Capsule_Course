@@ -330,6 +330,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#layer-visibility" id="toc-layer-visibility" class="nav-link" data-scroll-target="#layer-visibility">Layer visibility</a></li>
   <li><a href="#layer-symbology" id="toc-layer-symbology" class="nav-link" data-scroll-target="#layer-symbology">Layer symbology</a></li>
   </ul></li>
+  <li><a href="#basemaps" id="toc-basemaps" class="nav-link" data-scroll-target="#basemaps">Basemaps</a>
+  <ul class="collapse">
+  <li><a href="#adding-a-qgis-basemap-plug-in" id="toc-adding-a-qgis-basemap-plug-in" class="nav-link" data-scroll-target="#adding-a-qgis-basemap-plug-in">Adding a QGIS basemap plug-in</a></li>
+  </ul></li>
   <li><a href="#qgis-projects-versus-data" id="toc-qgis-projects-versus-data" class="nav-link" data-scroll-target="#qgis-projects-versus-data">QGIS: projects versus data</a></li>
   <li><a href="#getting-help-and-learning-more" id="toc-getting-help-and-learning-more" class="nav-link" data-scroll-target="#getting-help-and-learning-more">Getting help and learning more</a>
   <ul class="collapse">
@@ -447,6 +451,33 @@ ul.task-list li input[type="checkbox"] {
 <li>Clicking on <simple fill=""> (for polygons) will open a range of options for color and outline (“stroke”) width and color.</simple></li>
 </ol>
 <p><i class="fa-solid fa-bell" aria-label="bell"></i> <strong>Your turn</strong>: Adjust the symbology and ordering of the three layers.</p>
+</section>
+</section>
+<section id="basemaps" class="level2">
+<h2 class="anchored" data-anchor-id="basemaps">Basemaps</h2>
+<p>Basemaps provide a background for our layers in QGIS and are useful for providing spatial context and, when used sparingly, improving map compositions.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="page_images/airbnb_basemap1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<p>For example, the above image shows the distribution of Airbnb rentals in Rome for March 2023. However, without any additional spatial context, it’s hard to say much about the distribution of points.</p>
+<section id="adding-a-qgis-basemap-plug-in" class="level3">
+<h3 class="anchored" data-anchor-id="adding-a-qgis-basemap-plug-in">Adding a QGIS basemap plug-in</h3>
+<p>QGIS offers a variety of plug-ins that expand core QGIS capacity. The QuickMapServices plug-in offers connection to a range of basemaps.</p>
+<ul>
+<li>To install QuickMapService, use the Plugins pulldown menu on the main QGIS window and search plug-ins for “QuickMapSerices”.</li>
+<li>Install. Basemaps are then accessed via the Web pulldown menu and QuickMapServices
+<ul>
+<li><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> There are additional basemaps available: click on QuickMapServices Settings&gt;More services&gt;Get contributed pack.</li>
+</ul></li>
+<li>To add a basemap, simply choose one from the list. OSM, CartoDB, and Google are good choices.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="page_images/airbnb_basemap2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
 </section>
 </section>
 <section id="qgis-projects-versus-data" class="level2">
