@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GIS@GSSI - Tutorial 4: Introduction to Spatial Analysis</title>
+<title>GIS@GSSI - Tutorial 4: Even More Spatial Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,10 +71,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../Styles/website_styles.scss">
-<meta property="og:title" content="GIS@GSSI - Tutorial 4: Introduction to Spatial Analysis">
+<meta property="og:title" content="GIS@GSSI - Tutorial 4: Even More Spatial Analysis">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="GIS@GSSI">
-<meta name="twitter:title" content="GIS@GSSI - Tutorial 4: Introduction to Spatial Analysis">
+<meta name="twitter:title" content="GIS@GSSI - Tutorial 4: Even More Spatial Analysis">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -131,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Pages/More_spatial_analysis.html">Thursday</a></li><li class="breadcrumb-item"><a href="../Pages/Tutorial4.html">Tutorial 4: Introduction to Spatial Analysis</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Pages/More_spatial_analysis.html">Thursday</a></li><li class="breadcrumb-item"><a href="../Pages/Tutorial4.html">Tutorial 4: Even More Spatial Analysis</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -262,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Pages/Tutorial4.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Tutorial 4: Introduction to Spatial Analysis</span></a>
+ <span class="menu-text">Tutorial 4: Even More Spatial Analysis</span></a>
   </div>
 </li>
       </ul>
@@ -326,9 +326,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Pages/More_spatial_analysis.html">Thursday</a></li><li class="breadcrumb-item"><a href="../Pages/Tutorial4.html">Tutorial 4: Introduction to Spatial Analysis</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Pages/More_spatial_analysis.html">Thursday</a></li><li class="breadcrumb-item"><a href="../Pages/Tutorial4.html">Tutorial 4: Even More Spatial Analysis</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Tutorial 4: Introduction to Spatial Analysis</h1>
+<h1 class="title">Tutorial 4: Even More Spatial Analysis</h1>
 </div>
 
 
@@ -364,10 +364,10 @@ ul.task-list li input[type="checkbox"] {
 <li>Let’s consider the parts of the city that have the best access to the Metro. One way to do this is to create Voronoi polygons that partition the city, according to the closest station. This allows us to visualise the “catchment areas” of different stations.</li>
 </ol>
 <ul>
-<li><p>In the Toolbox search window, look for “Voronoi polygons”. They will be in the “Vector geometry” area.</p></li>
+<li><p>In the Toolbox search window, look for <code>Voronoi polygons</code>. They will be in the <code>Vector geometry</code> area.</p></li>
 <li><p>Open the interface and choose Metro stations as your input layer.</p>
 <p><i class="fa-solid fa-circle-exclamation" aria-label="circle-exclamation"></i> <strong>Important</strong>: many tools only operate on the minimum area contained by the set of features—since Metros don’t extend across all Urban Zones, our output polygons will not, by default, cover the entire city.</p>
-<p>To adjust for this, we use the “Buffer region” option, which increases the extent of the output layer.</p></li>
+<p>To adjust for this, we use the <code>Buffer region</code> option, which increases the extent of the output layer.</p></li>
 <li><p>Choose a destination and name for your output layer. Click run.</p></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
@@ -379,10 +379,10 @@ ul.task-list li input[type="checkbox"] {
 <li>Have a look at your output. You may want to rearrange your layers so you can see what’s going on.</li>
 </ul>
 <ol start="4" type="1">
-<li>Many of the polygons in this new layer extend well outside the border of the city. We will use the Clip tool to create an adjusted set of Voronoi polygons that align with Rome’s borders.</li>
+<li>Many of the polygons in this new layer extend well outside the border of the city. We will use the <code>Clip</code> tool to create an adjusted set of Voronoi polygons that align with Rome’s borders.</li>
 </ol>
 <ul>
-<li>The Clip tool is located in the same place as the Buffer tool:</li>
+<li><code>Clip</code> is located in the same place as <code>Buffer</code>:</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">

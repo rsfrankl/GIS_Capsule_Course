@@ -378,12 +378,12 @@ Rachel Franklin
 <h2>Thiessen (or Voronoi) polygons</h2>
 <h3 id="allocating-areas-to-their-closest-points">Allocating areas to their closest points</h3>
 <ul>
-<li>In QGIS: “Voronoi Polygons” tool
+<li>In QGIS: <code>Voronoi Polygons</code> tool
 <ul>
 <li>Creates new polygon layer as output</li>
 <li>Default extent of polygons is the bounded rectangle containing the points
 <ul>
-<li>Use “buffer region” option to expand boundaries of new polygon layer</li>
+<li>Use <code>buffer region</code> option to expand boundaries of new polygon layer</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -395,7 +395,7 @@ Rachel Franklin
 <img data-src="images_lectures/voronoi_rome_metro.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="how-to-change-boundaries-of-a-layer-to-match-another" class="slide level2 center">
 <h2>How to change boundaries of a layer to match another</h2>
-<h3 id="clip">Clip</h3>
+<h3 id="clip"><code>Clip</code></h3>
 <ul>
 <li>In QGIS located under Vector &gt; Geoprocessing
 <ul>
@@ -415,10 +415,36 @@ Rachel Franklin
 
 </section>
 <section id="near-distance-to-nearest-hub-in-qgis" class="slide level2 center">
-<h2>Near (“distance to nearest hub” in QGIS)</h2>
+<h2>Near (<code>distance to nearest hub</code> in QGIS)</h2>
 <h3 id="calculates-the-straight-line-distance-from-the-input-feature-to-the-nearest-feature-in-a-specified-feature-set">Calculates the straight line distance from the input feature to the nearest feature in a specified feature set</h3>
 
 <img data-src="images_lectures/GIS_near_tool.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="grids" class="slide level2 center">
+<h2>Grids</h2>
+<h3 id="creating-our-own-polygons">Creating our own polygons</h3>
+<ul>
+<li>Useful for generating uniform polygons as inputs for spatial joins
+<ul>
+<li>Overcomes shortcomings of administrative geographies which can vary considerably in size</li>
+</ul></li>
+<li>Also useful for visualizing data in an appealing way</li>
+<li>In QGIS, under <code>Research Tools</code> &gt; <code>Create Grid</code>
+<ul>
+<li>Choice of size and shape of output polygons (e.g., hexagons, squares, diamonds)</li>
+</ul></li>
+</ul>
+</section>
+<section id="grids-1" class="slide level2 center">
+<h2>Grids</h2>
+<h3 id="creating-our-own-polygons-1">Creating our own polygons</h3>
+
+<img data-src="images_lectures/create_grid.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="grids-2" class="slide level2 center">
+<h2>Grids</h2>
+<h3 id="spatial-join-with-grids-airbnb">Spatial join with grids: AirBnb</h3>
+
+<img data-src="images_lectures/grid_airbnb.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><p>What other tools could we use to improve this visualization?</p>
+</section>
 <section id="density-estimation" class="slide level2 center">
 <h2>Density estimation</h2>
 </section>

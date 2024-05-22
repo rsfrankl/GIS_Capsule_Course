@@ -262,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Pages/Tutorial4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tutorial 4: Introduction to Spatial Analysis</span></a>
+ <span class="menu-text">Tutorial 4: Even More Spatial Analysis</span></a>
   </div>
 </li>
       </ul>
@@ -379,7 +379,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Let’s start by exploring alternative ways of visualizing the AirBnb points. The first option is to count the number of AirBnBs falling within each Urban Zone of Rome.</li>
 </ol>
 <ul>
-<li>Under the Vector&gt;Analysis Tools pulldown menu, select “Count Points in Polygon”.</li>
+<li>Under the Vector&gt;Analysis Tools pulldown menu, select <code>Count Points in Polygon</code>.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -401,11 +401,11 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <ol start="4" type="1">
 <li><p>What if we want to know the average price of AirBnbs per night, by Urban Zone?</p>
-<p>It makes sense that Zones closer to the Centro Storico might be more expensive. To do this, we use a different, but similar, spatial join tool: “Join Attributes by Location (summary)”</p></li>
+<p>It makes sense that Zones closer to the Centro Storico might be more expensive. To do this, we use a different, but similar, spatial join tool: <code>Join Attributes by Location (summary)</code></p></li>
 </ol>
 <ul>
 <li><p>To access this tool, we will need to open our QGIS “Toolbox”, which is opened by clicking the toolbox icon <img src="page_images/toolbox_icon.png" class="img-fluid" style="width:5.0%"></p></li>
-<li><p>When you open the Toolbox, you are presented with many expandable menus. The tool we want, “Join Attributes by Location (summary)” is located in the “Vector general” menu.</p>
+<li><p>When you open the Toolbox, you are presented with many expandable menus. The tool we want, <code>Join Attributes by Location (summary)</code> is located in the “Vector general” menu.</p>
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Note: If you know which tool you are looking for, it’s easiest to simply use the search menu!</p></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
@@ -414,9 +414,9 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <ul>
-<li><p>Open the “Join Attributes by Location (summary)” tool.</p></li>
+<li><p>Open the <code>Join Attributes by Location (summary)</code> tool.</p></li>
 <li><p>In this interface, we will need to specify how the two layers should be combined—in this case, the Urban Zones <em>contain</em> the points. Tick that option.</p></li>
-<li><p>We also need to choose which fields to summarise and which summary statistics to calculate. Click on <img src="page_images/three_dots_icon.png" class="img-fluid" style="width:5.0%"> for Fields and Summaries and choose Count and Mean:</p></li>
+<li><p>We also need to choose which fields to summarise and which summary statistics to calculate. Click on <img src="page_images/three_dots_icon.png" class="img-fluid" style="width:5.0%"> for <code>Fields and Summaries</code> and choose <code>Count</code> and <code>Mean</code>:</p></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -434,10 +434,10 @@ ul.task-list li input[type="checkbox"] {
 <ol start="5" type="1">
 <li><p>Visualise your average price results by Urban Zone. Do they make sense?</p></li>
 <li><p>Next let’s see which Metro stations have the most AirBnbs nearby, and the highest average prices. To do this, we use a new tool—Buffers—as the easiest way to find out quickly which Metro stations have the most AirBnbs.</p>
-<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> If we only wanted a variable that calculates the distance from each AirBnb to the closest Metro, we could use the “distance to Nearest Hub (Points)” tool.</p></li>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> If we only wanted a variable that calculates the distance from each AirBnb to the closest Metro, we could use the <code>distance to Nearest Hub (Points)</code> tool.</p></li>
 </ol>
 <ul>
-<li>The “Buffer” tool is located under the Vector pulldown menu and Geoprocessing Tools (see below). You can also find it by searching the Toolbox.</li>
+<li>The <code>Buffer</code> tool is located under the Vector pulldown menu and Geoprocessing Tools (see below). You can also find it by searching the Toolbox.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -469,7 +469,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="independent-work">Independent work</h2>
 <ol start="9" type="1">
 <li><p>Which urban areas contain the highest number of <em>expensive</em> AirBnbs? <i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> You’ll need to start by defining “expensive”.</p></li>
-<li><p>Which areas contain the most AirBnbs per capita? <i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> You may need to refresh you memory of how to create a new variable!</p></li>
+<li><p>Which areas contain the most AirBnbs per capita? <i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> You may need to refresh your memory of how to create a new variable!</p></li>
 <li><p>Are AirBnbs located close to Metro stations more expensive than those located further away, on average? <i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Here a dissolved buffer makes more sense than individual Metro buffers!</p></li>
 </ol>
 
