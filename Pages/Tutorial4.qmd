@@ -1,5 +1,5 @@
 ---
-title: "Tutorial 4: Introduction to Spatial Analysis"
+title: "Tutorial 4: Even More Spatial Analysis"
 css: /Styles/website_styles.scss
 ---
 
@@ -19,13 +19,13 @@ This tutorial introduces additional spatial analysis tools and starts to reinfor
 
 3.  Let’s consider the parts of the city that have the best access to the Metro. One way to do this is to create Voronoi polygons that partition the city, according to the closest station. This allows us to visualise the “catchment areas” of different stations.
 
--   In the Toolbox search window, look for “Voronoi polygons”. They will be in the “Vector geometry” area.
+-   In the Toolbox search window, look for `Voronoi polygons`. They will be in the `Vector geometry` area.
 
 -   Open the interface and choose Metro stations as your input layer.
 
     {{< fa circle-exclamation >}} **Important**: many tools only operate on the minimum area contained by the set of features---since Metros don’t extend across all Urban Zones, our output polygons will not, by default, cover the entire city.
 
-    To adjust for this, we use the “Buffer region” option, which increases the extent of the output layer.
+    To adjust for this, we use the `Buffer region` option, which increases the extent of the output layer.
 
 -   Choose a destination and name for your output layer. Click run.
 
@@ -33,9 +33,9 @@ This tutorial introduces additional spatial analysis tools and starts to reinfor
 
 -   Have a look at your output. You may want to rearrange your layers so you can see what’s going on.
 
-4.  Many of the polygons in this new layer extend well outside the border of the city. We will use the Clip tool to create an adjusted set of Voronoi polygons that align with Rome’s borders.
+4.  Many of the polygons in this new layer extend well outside the border of the city. We will use the `Clip` tool to create an adjusted set of Voronoi polygons that align with Rome’s borders.
 
--   The Clip tool is located in the same place as the Buffer tool:
+-   `Clip` is located in the same place as `Buffer`:
 
 ![](page_images/geoprocessing_tools_menu.png){width="70%" fig-align="center"}
 

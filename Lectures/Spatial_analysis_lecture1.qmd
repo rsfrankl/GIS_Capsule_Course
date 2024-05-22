@@ -35,7 +35,7 @@ Often we use spatial analysis tools to *extract* information
     -   e.g., how many cities within 300km of L'Aquila?
 -   **Measurements** -- Describing aspects of geographic data, like length, area, or shape
     -   For example, calculating the size (or area) of a parcel
--   **Transformations** -- Changing or combining data to create new data Using logical, mathematical, or geometrical rules
+-   **Transformations** -- Changing or combining data to create new data, using logical, mathematical, or geometrical rules
 -   **Descriptive summaries** -- summary statistics for spatial data
 -   **Optimization** -- Finding the best locations for a set of objects
     -   For example, best locations for public services

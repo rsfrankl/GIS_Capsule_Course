@@ -39,8 +39,9 @@ This short course introduces students to the fundamentals of GIS: locating, impo
 - 10:30--11:00: [Tutorial 4](Pages/Tutorial4.qmd)
 - 11:00--11:15: Break!
 - 11:15--13:00: [Tutorial 4](Pages/Tutorial4.qmd) continued
-- 13:00--14:30: Lunch
-- 14:30--17:00: Project work and discussion
+- 13:00--14:00: Lunch
+- 14:00--14:30: Project consultation
+- 14:30--17:00: Independent project work
 
 ### Friday
 
